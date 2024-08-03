@@ -1,1 +1,3 @@
 # SlackademicAdvisor-RAG
+
+## Purpose
