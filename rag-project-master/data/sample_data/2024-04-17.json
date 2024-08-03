@@ -1,0 +1,128 @@
+[
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713347209.667859",
+        "edited": {
+            "user": "U01AXE0P5M3",
+            "ts": "1713347226.000000"
+        },
+        "client_msg_id": "b98efd87-b273-4aee-8088-588bd18dc2c2",
+        "text": "Maybe. I'll ask Saturn Cloud. Google colab for sure",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ktgI2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Maybe. I'll ask Saturn Cloud. Google colab for sure"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03JY8EUNCA",
+        "type": "message",
+        "ts": "1713347523.455189",
+        "client_msg_id": "1ddb091d-9f17-4a54-822e-b29322a7e654",
+        "text": "Thank you <@U01AXE0P5M3>",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "0e5c1308cc9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-17\/4557343973968_0e5c1308cc9df68bed66_72.jpg",
+            "first_name": "Ifra",
+            "real_name": "Ifra Saifi",
+            "display_name": "Ifra",
+            "team": "T01ATQK62F8",
+            "name": "0808080pl",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q\/BgB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U058DK5U916",
+        "type": "message",
+        "ts": "1713422028.656979",
+        "client_msg_id": "a5b30ee6-c157-46c8-a3b1-9c5bce189332",
+        "text": "Hi, this is excellent news! I can't wait for June to start the course!!",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "7fbf6ba7d775",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-05-24\/7156485226455_7fbf6ba7d775e97b3312_72.jpg",
+            "first_name": "Jorge",
+            "real_name": "Jorge Ayala AI",
+            "display_name": "Jorge Ayala AI",
+            "team": "T01ATQK62F8",
+            "name": "ayalasaenzjorge.ai",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Rkv5v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, this is excellent news! I can't wait for June to start the course!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

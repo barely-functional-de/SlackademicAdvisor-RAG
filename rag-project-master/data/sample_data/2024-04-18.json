@@ -1,0 +1,40 @@
+[
+    {
+        "user": "U06T5ND801F",
+        "type": "message",
+        "ts": "1713469127.293629",
+        "client_msg_id": "22fdfb05-f724-4e40-a236-ba487d77e9cf",
+        "text": "super excited!",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5f42a9b2ae1e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-04\/6923761362881_5f42a9b2ae1e00b1cd05_72.png",
+            "first_name": "Brandon",
+            "real_name": "Brandon Guerrero",
+            "display_name": "Brandon Guerrero",
+            "team": "T01ATQK62F8",
+            "name": "info.brandonguerrero",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cty89",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "super excited!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
