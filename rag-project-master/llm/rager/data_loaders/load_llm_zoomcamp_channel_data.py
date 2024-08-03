@@ -1,5 +1,5 @@
 import pandas as pd
-from llm.utils.helpers.load_helpers import (
+from llm.utils.helpers.load_channel_helpers import (
     read_json_files,
     process_messages,
     create_dataframe,
