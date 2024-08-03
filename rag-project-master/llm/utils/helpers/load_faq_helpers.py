@@ -3,7 +3,7 @@ import hashlib
 import pandas as pd
 from datetime import datetime
 
-METADATA_FILE = 'processed_files_metadata.json'
+METADATA_FILE = 'processed_faq_metadata.json'
 
 def load_json(filename):
     """Load JSON data from a file."""
@@ -13,7 +13,7 @@ def load_json(filename):
 
 def generate_id(entry):
     """Generate a unique ID based on the entry's properties."""
-    hash_input = (entry['question'] + entry['text'] + entry['course'] + entry['section']).encode()
+    hash_input = (f"{entry['course'] - entry['question'] + entry['text'][:10]}").encode()
     return hashlib.sha256(hash_input).hexdigest()
 
 def add_id_column(data):
@@ -22,10 +22,10 @@ def add_id_column(data):
         entry['id'] = generate_id(entry)
     return data
 
-def read_metadata():
+def read_metadata(metadata_file_path):
     """Read processed metadata from the metadata file."""
     try:
-        with open(METADATA_FILE, 'r') as file:
+        with open(metadata_file_path, 'r') as file:
             metadata = json.load(file)
     except FileNotFoundError:
         metadata = []
