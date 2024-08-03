@@ -1,0 +1,173 @@
+[
+    {
+        "user": "U03UXDRQMFF",
+        "type": "message",
+        "ts": "1713864400.456379",
+        "client_msg_id": "7120cb48-6f9f-427d-b2ea-7d09002c5eeb",
+        "text": "Hi <@U01AXE0P5M3>, I liked the idea of the two webinars (dlt and Risingwave) that you managed to insert as side arguments in the DE zoomcamp program. It would be nice to have a webinar on what seems to me to be the hot subject of this year for llms: agents",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g2a187177d94",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2a187177d94f31b7a11d140c82d1646b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "luca",
+            "real_name": "luca pugliese",
+            "display_name": "luca pugliese",
+            "team": "T01ATQK62F8",
+            "name": "lucapug",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713864400.456379",
+        "reply_count": 5,
+        "reply_users_count": 4,
+        "latest_reply": "1714120348.093409",
+        "reply_users": [
+            "U01AXE0P5M3",
+            "U03UXDRQMFF",
+            "U06B2RN8BJ7",
+            "U04HJLYTLKT"
+        ],
+        "replies": [
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713941466.050129"
+            },
+            {
+                "user": "U03UXDRQMFF",
+                "ts": "1713941852.357629"
+            },
+            {
+                "user": "U06B2RN8BJ7",
+                "ts": "1713958712.288449"
+            },
+            {
+                "user": "U03UXDRQMFF",
+                "ts": "1713966064.869609"
+            },
+            {
+                "user": "U04HJLYTLKT",
+                "ts": "1714120348.093409"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1714120348.093409",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ebn\/k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I liked the idea of the two webinars (dlt and Risingwave) that you managed to insert as side arguments in the DE zoomcamp program. It would be nice to have a webinar on what seems to me to be the hot subject of this year for llms: agents"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "100",
+                "users": [
+                    "U06B2RN8BJ7",
+                    "U058DK5U916"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713941466.050129",
+        "client_msg_id": "6902465c-2e32-453f-88f9-8c55f9649156",
+        "text": "Great idea! Do you know a company\/tool that specializes in it?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713864400.456379",
+        "parent_user_id": "U03UXDRQMFF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xNg7E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great idea! Do you know a company\/tool that specializes in it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03UXDRQMFF",
+        "type": "message",
+        "ts": "1713941852.357629",
+        "client_msg_id": "278c5337-c77e-4cd0-9279-680566937966",
+        "text": "let me give a look at what I have stored as articles and other content on the subject. I have no clear idea, just a feeling that it is an important subject to introduce..",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g2a187177d94",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2a187177d94f31b7a11d140c82d1646b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "luca",
+            "real_name": "luca pugliese",
+            "display_name": "luca pugliese",
+            "team": "T01ATQK62F8",
+            "name": "lucapug",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713864400.456379",
+        "parent_user_id": "U03UXDRQMFF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KPVLR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "let me give a look at what I have stored as articles and other content on the subject. I have no clear idea, just a feeling that it is an important subject to introduce.."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,297 @@
+[
+    {
+        "user": "U06SU5HPXGU",
+        "type": "message",
+        "ts": "1713949515.145499",
+        "client_msg_id": "c56ee5f5-b8e2-487e-be59-0a76fee7a2f1",
+        "text": "Hi <@U01AXE0P5M3> will the syllabus cover building production ready RAG application?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "200566d9a27f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-04\/6903091385686_200566d9a27f85e632ac_72.jpg",
+            "first_name": "Galvan",
+            "real_name": "Galvan Goh",
+            "display_name": "Galvan Goh",
+            "team": "T01ATQK62F8",
+            "name": "galvangjx",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713949515.145499",
+        "reply_count": 5,
+        "reply_users_count": 3,
+        "latest_reply": "1714492085.267609",
+        "reply_users": [
+            "U01AXE0P5M3",
+            "U06SU5HPXGU",
+            "U06TH9YV0QL"
+        ],
+        "replies": [
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713949544.176219"
+            },
+            {
+                "user": "U06SU5HPXGU",
+                "ts": "1713949580.116739"
+            },
+            {
+                "user": "U06SU5HPXGU",
+                "ts": "1714376623.848239"
+            },
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1714380205.174259"
+            },
+            {
+                "user": "U06TH9YV0QL",
+                "ts": "1714492085.267609"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1714492085.267609",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "txOg0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " will the syllabus cover building production ready RAG application?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713949544.176219",
+        "client_msg_id": "c1923d3a-5c94-4b79-809c-2304eb87cf1b",
+        "text": "Yes",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713949515.145499",
+        "parent_user_id": "U06SU5HPXGU",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "c53D7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "tada",
+                "users": [
+                    "U058DK5U916",
+                    "U03GSLHMCD6",
+                    "U04EULUA3FB",
+                    "U058FM594HW"
+                ],
+                "count": 4
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U04HJLYTLKT",
+                    "U07138YE3C6"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06SU5HPXGU",
+        "type": "message",
+        "ts": "1713949580.116739",
+        "client_msg_id": "5b65622c-f78c-4462-aada-1e54f7b661aa",
+        "text": "Nice, looking forward",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "200566d9a27f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-04\/6903091385686_200566d9a27f85e632ac_72.jpg",
+            "first_name": "Galvan",
+            "real_name": "Galvan Goh",
+            "display_name": "Galvan Goh",
+            "team": "T01ATQK62F8",
+            "name": "galvangjx",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713949515.145499",
+        "parent_user_id": "U06SU5HPXGU",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sqiHt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nice, looking forward"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06B2RN8BJ7",
+        "type": "message",
+        "ts": "1713958712.288449",
+        "client_msg_id": "54c0caed-26a5-41c8-a9db-0cc2ca138f1f",
+        "text": "\"Agents + tools + memory\" is a good combination for the course, I agree on with luca that agents shall be somehow be included in the course with course material or webinar :raised_hands:",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g17b6da6ffae",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6d1388a9f5c80f712037813b01f6dea6.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "Alexey",
+            "real_name": "Alexey Loser",
+            "display_name": "",
+            "team": "T01ATQK62F8",
+            "name": "bemartcu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713864400.456379",
+        "parent_user_id": "U03UXDRQMFF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l\/dDR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"Agents + tools + memory\" is a good combination for the course, I agree on with luca that agents shall be somehow be included in the course with course material or webinar "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "raised_hands",
+                                "unicode": "1f64c"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03UXDRQMFF",
+        "type": "message",
+        "ts": "1713966064.869609",
+        "edited": {
+            "user": "U03UXDRQMFF",
+            "ts": "1713966102.000000"
+        },
+        "client_msg_id": "0578766a-7ea7-475a-aab6-e52ae88cca93",
+        "text": "I have found that all of the things that I had stored (and many more) are included in <https:\/\/github.com\/Yuan-ManX\/ai-agent-roadmap|this list on github>. In particular, among all the tools listed there, my curiosity is towards: autoGPT, LLMstack and openGPT",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g2a187177d94",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2a187177d94f31b7a11d140c82d1646b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "luca",
+            "real_name": "luca pugliese",
+            "display_name": "luca pugliese",
+            "team": "T01ATQK62F8",
+            "name": "lucapug",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713864400.456379",
+        "parent_user_id": "U03UXDRQMFF",
+        "attachments": [
+            {
+                "image_url": "https:\/\/opengraph.githubassets.com\/56bc06fa208e469dd313584dbdc423cbade5d3bfaa80622b3db8fec0b2bcd479\/Yuan-ManX\/ai-agent-roadmap",
+                "image_width": 1200,
+                "image_height": 600,
+                "image_bytes": 139171,
+                "from_url": "https:\/\/github.com\/Yuan-ManX\/ai-agent-roadmap",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/Yuan-ManX\/ai-agent-roadmap",
+                "fallback": "GitHub: GitHub - Yuan-ManX\/ai-agent-roadmap: Explore the latest AI Agent Framework!",
+                "text": "Explore the latest AI Agent Framework! Contribute to Yuan-ManX\/ai-agent-roadmap development by creating an account on GitHub.",
+                "title": "GitHub - Yuan-ManX\/ai-agent-roadmap: Explore the latest AI Agent Framework!",
+                "title_link": "https:\/\/github.com\/Yuan-ManX\/ai-agent-roadmap",
+                "service_name": "GitHub"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vemtT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have found that all of the things that I had stored (and many more) are included in "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/Yuan-ManX\/ai-agent-roadmap",
+                                "text": "this list on github"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". In particular, among all the tools listed there, my curiosity is towards: autoGPT, LLMstack and openGPT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

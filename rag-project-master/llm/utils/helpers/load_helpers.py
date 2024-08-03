@@ -5,9 +5,9 @@ import hashlib
 import pandas as pd
 
 # Function to read and parse JSON files
-def read_json_files(data_path):
+def read_json_files(file_paths):
     all_data = []
-    for file_path in glob.glob(data_path):
+    for file_path in file_paths:
         with open(file_path, 'r') as f:
             data = json.load(f)
             all_data.extend(data)

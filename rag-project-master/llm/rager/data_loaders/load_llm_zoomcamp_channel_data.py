@@ -33,8 +33,10 @@ def load_data(*args, **kwargs):
     if not new_files:
         print("No new files to process.")
         return pd.DataFrame()
+    if new_files:
+        print(f'new_files: {new_files}')
     
-    data = read_json_files(data_path)
+    data = read_json_files(new_files)
     ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps = process_messages(data)
     df = create_dataframe(ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps)
     
