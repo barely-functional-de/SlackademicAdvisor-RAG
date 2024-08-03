@@ -76,5 +76,17 @@
         "text": "Your WSL2 is set to use Y.Y GiB, not all your computer memory. Create .wslconfig file under your Windows user profile directory (C:\\Users\\YourUsername\\.wslconfig) with the desired RAM allocation: [wsl2] memory=8GB. Restart WSL: wsl --shutdown. Run the free command to verify the changes. For more details, read this article.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
+    },
+    {
+        "question": "OpenAI: Error when running OpenAI chat.completions.create command",
+        "text": "You may receive the following error when running the OpenAI chat.completions.create command due to insufficient credits in your OpenAI account: NotFoundError: Error code: 404 - {'error': {'message': 'The model `gpt-4o` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+        "course": "llm-zoomcamp",
+        "section": "Module 1: Introduction"
+    },
+    {
+        "question": "OpenAI: Error: RateLimitError: Error code: 429",
+        "text": "RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'} The above errors are related to your OpenAI API account’s quota. There is no free usage of OpenAI’s API so you will be required to add funds using a credit card (see pay as you go in the OpenAI settings at platform.openai.com). Once added, re-run your python command and you should receive a successful return code. Steps to resolve: Add credits to your account here (min $5) In chat.completions.create(model='gpt-4o', …) specify one of the available for you models: You might need to recreate an API key after adding credits to your account and update it locally.",
+        "course": "llm-zoomcamp",
+        "section": "Module 1: Introduction"
     }
 ]

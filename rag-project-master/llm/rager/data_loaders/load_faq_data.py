@@ -24,13 +24,16 @@ def load_data(*args, **kwargs):
     """
     # Specify your data loading logic here
     filename = kwargs['faq_data_path']
+    faq_metadata_file = kwargs['faq_metadata_file']
     data = load_json(filename)
     data_with_ids = add_id_column(data)
-    new_entries = filter_new_entries(data_with_ids)
-    update_metadata(new_entries)
+    new_entries = filter_new_entries(data_with_ids, faq_metadata_file)
+    if new_entries:
+        print(f"{len(new_entries)} new entries")
+    update_metadata(new_entries, faq_metadata_file)
+    
     return pd.DataFrame(new_entries)
 
-    return {}
 
 
 @test
