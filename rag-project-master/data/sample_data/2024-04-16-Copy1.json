@@ -1,0 +1,46 @@
+[
+    {
+        "user": "U03JY8EUNCA",
+        "type": "message",
+        "ts": "1713323426.833979",
+        "client_msg_id": "81e88ea2-171c-4217-ba50-9a9a98b013cd",
+        "text": "<@U01AXE0P5M3> can we use Saturn cloud and Google colab for this course?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "0e5c1308cc9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-17\/4557343973968_0e5c1308cc9df68bed66_72.jpg",
+            "first_name": "Ifra",
+            "real_name": "Ifra Saifi",
+            "display_name": "Ifra",
+            "team": "T01ATQK62F8",
+            "name": "0808080pl",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FJhRa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can we use Saturn cloud and Google colab for this course?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

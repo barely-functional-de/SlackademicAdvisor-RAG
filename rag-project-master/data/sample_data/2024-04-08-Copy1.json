@@ -1,0 +1,58 @@
+[
+    {
+        "user": "U03U2GZ7K5M",
+        "type": "message",
+        "ts": "1712589025.293289",
+        "client_msg_id": "B0A9766D-064E-4E11-A9D5-C6435FDC0F70",
+        "text": "Hello, nice to be here :smiley:\n\nGreetings from Mexico!",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "b78d5a8675d4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-08-26\/3999253420067_b78d5a8675d4d3c948fb_72.png",
+            "first_name": "Humberto",
+            "real_name": "Humberto Rodriguez",
+            "display_name": "",
+            "team": "T01ATQK62F8",
+            "name": "harg_123",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o\/tWo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, nice to be here "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley",
+                                "unicode": "1f603"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nGreetings from Mexico!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U05609A05NK"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

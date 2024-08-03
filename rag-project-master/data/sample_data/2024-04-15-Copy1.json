@@ -1,0 +1,491 @@
+[
+    {
+        "user": "U03JY8EUNCA",
+        "type": "message",
+        "ts": "1713179914.616589",
+        "client_msg_id": "1b06f670-11c5-4bb1-9e42-75e7afcff2c2",
+        "text": "Hi <@U01AXE0P5M3>, can you please let me know what are the minimum requirements for this course? Additionally what stacks we will be going to learn and what will be the minimum system requirements for that?\n\nThank you in advance!",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "0e5c1308cc9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-17\/4557343973968_0e5c1308cc9df68bed66_72.jpg",
+            "first_name": "Ifra",
+            "real_name": "Ifra Saifi",
+            "display_name": "Ifra",
+            "team": "T01ATQK62F8",
+            "name": "0808080pl",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "reply_count": 11,
+        "reply_users_count": 3,
+        "latest_reply": "1713347523.455189",
+        "reply_users": [
+            "U01AXE0P5M3",
+            "U04HJLYTLKT",
+            "U03JY8EUNCA"
+        ],
+        "replies": [
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713180442.404689"
+            },
+            {
+                "user": "U04HJLYTLKT",
+                "ts": "1713184094.649829"
+            },
+            {
+                "user": "U03JY8EUNCA",
+                "ts": "1713185356.472399"
+            },
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713204039.073799"
+            },
+            {
+                "user": "U03JY8EUNCA",
+                "ts": "1713239201.334749"
+            },
+            {
+                "user": "U04HJLYTLKT",
+                "ts": "1713239455.566639"
+            },
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713244721.415989"
+            },
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713245073.466419"
+            },
+            {
+                "user": "U03JY8EUNCA",
+                "ts": "1713323426.833979"
+            },
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1713347209.667859"
+            },
+            {
+                "user": "U03JY8EUNCA",
+                "ts": "1713347523.455189"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1713347523.455189",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "faBrX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", can you please let me know what are the minimum requirements for this course? Additionally what stacks we will be going to learn and what will be the minimum system requirements for that?\n\nThank you in advance!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713180442.404689",
+        "client_msg_id": "3178e2de-2428-4730-88b0-9a95d33bf8c9",
+        "text": "The course page has the requirements. What do you mean by stacks?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kqats",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The course page has the requirements. What do you mean by stacks?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03JY8EUNCA"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U04HJLYTLKT",
+        "type": "message",
+        "ts": "1713184094.649829",
+        "client_msg_id": "b593a04b-5ac0-4a18-927f-784c32ceb93f",
+        "text": "Might be referring to tech stack...",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "924b1c17f36a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-02\/4586535192964_924b1c17f36aef225b8c_72.jpg",
+            "first_name": "Tahir",
+            "real_name": "Tahir",
+            "display_name": "Tahir",
+            "team": "T01ATQK62F8",
+            "name": "ttlashari5",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wdKNg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Might be referring to tech stack..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03JY8EUNCA"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03JY8EUNCA",
+        "type": "message",
+        "ts": "1713185356.472399",
+        "client_msg_id": "c440dfde-3363-4b6e-8e7f-17aaf60f9611",
+        "text": "<@U01AXE0P5M3> Yeah, I mean tech stack for example which model and tools we will be learning, thank you <@U04HJLYTLKT>",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "0e5c1308cc9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-17\/4557343973968_0e5c1308cc9df68bed66_72.jpg",
+            "first_name": "Ifra",
+            "real_name": "Ifra Saifi",
+            "display_name": "Ifra",
+            "team": "T01ATQK62F8",
+            "name": "0808080pl",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aS9tH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Yeah, I mean tech stack for example which model and tools we will be learning, thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04HJLYTLKT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04HJLYTLKT"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713204039.073799",
+        "client_msg_id": "d5809bcf-f83a-4ea8-91bb-8a156fcac34d",
+        "text": "Open AI plus hugging face hub",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SPx7q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Open AI plus hugging face hub"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03JY8EUNCA",
+        "type": "message",
+        "ts": "1713239201.334749",
+        "client_msg_id": "c5e22b00-f5fd-49da-a1ad-703b387e2c1a",
+        "text": "Thank you <@U01AXE0P5M3>",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "0e5c1308cc9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-17\/4557343973968_0e5c1308cc9df68bed66_72.jpg",
+            "first_name": "Ifra",
+            "real_name": "Ifra Saifi",
+            "display_name": "Ifra",
+            "team": "T01ATQK62F8",
+            "name": "0808080pl",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q\/BgB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04HJLYTLKT",
+        "type": "message",
+        "ts": "1713239455.566639",
+        "client_msg_id": "fe2a7795-c7ed-4b0d-8490-11987416375c",
+        "text": "This would be a first course that requires a paid software. right <@U01AXE0P5M3>?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "924b1c17f36a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-02\/4586535192964_924b1c17f36aef225b8c_72.jpg",
+            "first_name": "Tahir",
+            "real_name": "Tahir",
+            "display_name": "Tahir",
+            "team": "T01ATQK62F8",
+            "name": "ttlashari5",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1wKhh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This would be a first course that requires a paid software. right "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713244721.415989",
+        "client_msg_id": "d8192a13-2c34-4587-8b1e-2f46bb27c906",
+        "text": "No, all other courses also required a cloud",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4Eky4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No, all other courses also required a cloud"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04HJLYTLKT"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1713245073.466419",
+        "client_msg_id": "d87abf48-ef5b-48e8-9bee-a300af3b506e",
+        "text": "We will also use open source",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713179914.616589",
+        "parent_user_id": "U03JY8EUNCA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nsrrU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We will also use open source"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04HJLYTLKT"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

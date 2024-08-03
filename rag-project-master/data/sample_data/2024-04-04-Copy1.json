@@ -1,0 +1,408 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U01AXE0P5M3",
+        "text": "<@U01AXE0P5M3> has joined the channel",
+        "type": "message",
+        "ts": "1712219072.010799"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06SV3TDAJC",
+        "text": "<@U06SV3TDAJC> has joined the channel",
+        "type": "message",
+        "ts": "1712219607.674539"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U04E722ASS3",
+        "text": "<@U04E722ASS3> has joined the channel",
+        "type": "message",
+        "ts": "1712220041.376289"
+    },
+    {
+        "user": "U04E722ASS3",
+        "type": "message",
+        "ts": "1712220048.482559",
+        "client_msg_id": "EDE95F76-B8FE-46F5-A03F-45DD0A33A98B",
+        "text": "heya",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5b4580be2457",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-09\/4494667110997_5b4580be2457c6ca1b69_72.png",
+            "first_name": "Kristian",
+            "real_name": "Kristian Maglasang",
+            "display_name": "Kristian Maglasang",
+            "team": "T01ATQK62F8",
+            "name": "kristian.g.maglasang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Kr4ps",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "heya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01AXE0P5M3",
+                    "U05PWEGNNTD",
+                    "U06TGQW4HHD",
+                    "U05609A05NK"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U03UXDRQMFF",
+        "text": "<@U03UXDRQMFF> has joined the channel",
+        "type": "message",
+        "ts": "1712223146.997169"
+    },
+    {
+        "user": "U03UXDRQMFF",
+        "type": "message",
+        "ts": "1712223185.959429",
+        "client_msg_id": "e92cef1a-6945-4aee-a489-9aa0b46b2c50",
+        "text": "Hello! nice to be here..:grinning:",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g2a187177d94",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2a187177d94f31b7a11d140c82d1646b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "luca",
+            "real_name": "luca pugliese",
+            "display_name": "luca pugliese",
+            "team": "T01ATQK62F8",
+            "name": "lucapug",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pmc2a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! nice to be here.."
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "grinning",
+                                "unicode": "1f600"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01AXE0P5M3",
+                    "U05PWEGNNTD",
+                    "U06TGQW4HHD",
+                    "U05609A05NK"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06PJQUCQQL",
+        "text": "<@U06PJQUCQQL> has joined the channel",
+        "type": "message",
+        "ts": "1712225189.590359"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U059FRUU8PM",
+        "text": "<@U059FRUU8PM> has joined the channel",
+        "type": "message",
+        "ts": "1712226238.528849"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06SPEJKMFF",
+        "text": "<@U06SPEJKMFF> has joined the channel",
+        "type": "message",
+        "ts": "1712226529.422069"
+    },
+    {
+        "user": "U06SPEJKMFF",
+        "type": "message",
+        "ts": "1712226627.805659",
+        "client_msg_id": "547fe45f-4378-4446-9076-b91212d21f8b",
+        "text": "Hey there! So this is the channel to get updates for the LLM zoomcamp, right?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "gc3fc3c0b8a9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/c3fc3c0b8a9dea383cb6c39d113d32b1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-72.png",
+            "first_name": "Bhavya",
+            "real_name": "Bhavya Gupta",
+            "display_name": "",
+            "team": "T01ATQK62F8",
+            "name": "gbhavya1999",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712226627.805659",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1712227767.099769",
+        "reply_users": [
+            "U01AXE0P5M3"
+        ],
+        "replies": [
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1712227767.099769"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1712227767.099769",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VTMZW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey there! So this is the channel to get updates for the LLM zoomcamp, right?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U03BRPVT5C5",
+        "text": "<@U03BRPVT5C5> has joined the channel",
+        "type": "message",
+        "ts": "1712226964.028719"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U04JN7QSB1V",
+        "text": "<@U04JN7QSB1V> has joined the channel",
+        "type": "message",
+        "ts": "1712227160.902089"
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1712227767.099769",
+        "client_msg_id": "9669c6a5-597c-4757-8cbe-b9b641f0fb03",
+        "text": "Yes that's right",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712226627.805659",
+        "parent_user_id": "U06SPEJKMFF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2PsBQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes that's right"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U02Q7T4U2NS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U04DMUQ6MSS",
+        "text": "<@U04DMUQ6MSS> has joined the channel",
+        "type": "message",
+        "ts": "1712234629.539789"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U02HB9KTERJ",
+        "text": "<@U02HB9KTERJ> has joined the channel",
+        "type": "message",
+        "ts": "1712234840.234489"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06S2J1LFB4",
+        "text": "<@U06S2J1LFB4> has joined the channel",
+        "type": "message",
+        "ts": "1712235337.467339"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U057GC2CG4W",
+        "text": "<@U057GC2CG4W> has joined the channel",
+        "type": "message",
+        "ts": "1712236392.531269"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U05PWEGNNTD",
+        "text": "<@U05PWEGNNTD> has joined the channel",
+        "type": "message",
+        "ts": "1712238562.078609"
+    },
+    {
+        "user": "U05PWEGNNTD",
+        "type": "message",
+        "ts": "1712238631.304149",
+        "client_msg_id": "5F8A25B8-5B68-43E0-8197-8023F1031D1D",
+        "text": "Hello everyone :wave::skin-tone-2: ",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "4fa166abed17",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-08-28\/5806028952646_4fa166abed17a5c2ec58_72.png",
+            "first_name": "Günal",
+            "real_name": "Günal Hınçal",
+            "display_name": "",
+            "team": "T01ATQK62F8",
+            "name": "hincalgunal",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "INQj5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave",
+                                "unicode": "1f44b-1f3fb",
+                                "skin_tone": 2
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01AXE0P5M3",
+                    "U05609A05NK"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U05S82BFS79",
+        "text": "<@U05S82BFS79> has joined the channel",
+        "type": "message",
+        "ts": "1712238684.599459"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U04AXN86XLZ",
+        "text": "<@U04AXN86XLZ> has joined the channel",
+        "type": "message",
+        "ts": "1712240903.956989"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U02QU94V4PN",
+        "text": "<@U02QU94V4PN> has joined the channel",
+        "type": "message",
+        "ts": "1712253585.100739"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U05U30D74S0",
+        "text": "<@U05U30D74S0> has joined the channel",
+        "type": "message",
+        "ts": "1712258971.767979"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06SPTUCPL6",
+        "text": "<@U06SPTUCPL6> has joined the channel",
+        "type": "message",
+        "ts": "1712268963.168669"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U02T962QTJ6",
+        "text": "<@U02T962QTJ6> has joined the channel",
+        "type": "message",
+        "ts": "1712274285.918049"
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "user": "U04HR1FPGNS",
+        "type": "message",
+        "ts": "1713040186.854499",
+        "client_msg_id": "99ed3fc1-b54e-4e54-b78f-cd55531bd8cc",
+        "text": "Hello everyone, nice to join this channel! :grinning:",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "g3bee6960adb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3bee6960adb0832568a983f7fc0683f3.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "murat",
+            "real_name": "murat kahraman",
+            "display_name": "murat kahraman",
+            "team": "T01ATQK62F8",
+            "name": "muradkahraman",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BbACT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone, nice to join this channel! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "grinning",
+                                "unicode": "1f600"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05RSAFSFL4"
+                ],
+                "count": 1
+            },
+            {
+                "name": "wave",
+                "users": [
+                    "U05609A05NK"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

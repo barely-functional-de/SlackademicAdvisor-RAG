@@ -1,0 +1,163 @@
+[
+    {
+        "user": "U04HJLYTLKT",
+        "type": "message",
+        "ts": "1712310923.174359",
+        "client_msg_id": "842f88ed-c926-48cb-9fcb-17acfd2dd040",
+        "text": "Hi :wave: <@U01AXE0P5M3> when the course ia going to start? Also is there a Telegram channel for this course's announcements?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "924b1c17f36a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-02\/4586535192964_924b1c17f36aef225b8c_72.jpg",
+            "first_name": "Tahir",
+            "real_name": "Tahir",
+            "display_name": "Tahir",
+            "team": "T01ATQK62F8",
+            "name": "ttlashari5",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712310923.174359",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1712311169.688079",
+        "reply_users": [
+            "U01AXE0P5M3",
+            "U04HJLYTLKT"
+        ],
+        "replies": [
+            {
+                "user": "U01AXE0P5M3",
+                "ts": "1712311144.243969"
+            },
+            {
+                "user": "U04HJLYTLKT",
+                "ts": "1712311169.688079"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1712311169.688079",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KcVR0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave",
+                                "unicode": "1f44b"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " when the course ia going to start? Also is there a Telegram channel for this course's announcements?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1712311144.243969",
+        "client_msg_id": "5eff67b6-e738-44d8-a84a-a81457cdff5b",
+        "text": "TBA\n\nOnce we know the date, I'll create a channel",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712310923.174359",
+        "parent_user_id": "U04HJLYTLKT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R7wR8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "TBA\n\nOnce we know the date, I'll create a channel"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04HJLYTLKT",
+        "type": "message",
+        "ts": "1712311169.688079",
+        "client_msg_id": "4a4e4585-d448-46f3-bbe8-93e965cc0be2",
+        "text": "Thank you :blush:",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "924b1c17f36a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-02\/4586535192964_924b1c17f36aef225b8c_72.jpg",
+            "first_name": "Tahir",
+            "real_name": "Tahir",
+            "display_name": "Tahir",
+            "team": "T01ATQK62F8",
+            "name": "ttlashari5",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712310923.174359",
+        "parent_user_id": "U04HJLYTLKT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F8gUv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "blush",
+                                "unicode": "1f60a"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
