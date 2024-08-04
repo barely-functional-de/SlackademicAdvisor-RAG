@@ -1,79 +1,79 @@
 [
     {
         "question": "I just discovered the course. Can I still join?",
-        "text": "Yes, but if you want to receive a certificate, you need to submit your project while we’re still accepting submissions.",
+        "answer": "Yes, but if you want to receive a certificate, you need to submit your project while we’re still accepting submissions.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "I have registered for the [insert-zoomcamp-name]. When can I expect to receive the confirmation email?",
-        "text": "You don't need it. You're accepted. You can also just start learning and submitting homework (while the form is Open) without registering. It is not checked against any registered list. Registration is just to gauge interest before the start date.",
+        "answer": "You don't need it. You're accepted. You can also just start learning and submitting homework (while the form is Open) without registering. It is not checked against any registered list. Registration is just to gauge interest before the start date.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "What is the video/zoom link to the stream for the “Office Hours” or live/workshop sessions?",
-        "text": "The zoom link is only published to instructors/presenters/TAs. Students participate via Youtube Live and submit questions to Slido (link would be pinned in the chat when Alexey goes Live). The video URL should be posted in the announcements channel on Telegram & Slack before it begins. Also, you will see it live on the DataTalksClub YouTube Channel. Don’t post your questions in chat as it would be off-screen before the instructors/moderators have a chance to answer it if the room is very active.",
+        "answer": "The zoom link is only published to instructors/presenters/TAs. Students participate via Youtube Live and submit questions to Slido (link would be pinned in the chat when Alexey goes Live). The video URL should be posted in the announcements channel on Telegram & Slack before it begins. Also, you will see it live on the DataTalksClub YouTube Channel. Don’t post your questions in chat as it would be off-screen before the instructors/moderators have a chance to answer it if the room is very active.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "SaturnCloud - How do I get access?",
-        "text": "Issue: I get the notice that due to traffic, I’m on a waitlist for new signups. Answer: There was a form to submit our emails to, so Alexey can send it in bulk. If you missed that deadline, just sign up manually (or via request tech demo link) and use the chat to request for free hours for 'llm zoomcamp'. Issue: I’m a pre-existing user from a different zoomcamp and I’m not awarded the free hours even though I’ve submitted my email in the form. Answer: Just request it via their chat, after you’ve logged in using your pre-existing account, citing 'llm zoomcamp'.",
+        "answer": "Issue: I get the notice that due to traffic, I’m on a waitlist for new signups. Answer: There was a form to submit our emails to, so Alexey can send it in bulk. If you missed that deadline, just sign up manually (or via request tech demo link) and use the chat to request for free hours for 'llm zoomcamp'. Issue: I’m a pre-existing user from a different zoomcamp and I’m not awarded the free hours even though I’ve submitted my email in the form. Answer: Just request it via their chat, after you’ve logged in using your pre-existing account, citing 'llm zoomcamp'.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "SaturnCloud - How many free hours do we get?",
-        "text": "We get 15 free hours per month, which might be limited to the free tier’s hardware configuration.",
+        "answer": "We get 15 free hours per month, which might be limited to the free tier’s hardware configuration.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "SaturnCloud - Something went wrong. Max of 15 hours of resource usage per month",
-        "text": "This message means you have used all allocated hours. Make sure to set Shutout After in settings. Also, do not leave your notebooks running. If your hours are out, try using Google Colab and Kaggle.",
+        "answer": "This message means you have used all allocated hours. Make sure to set Shutout After in settings. Also, do not leave your notebooks running. If your hours are out, try using Google Colab and Kaggle.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "Cloud alternatives with GPU",
-        "text": "Check the quota and reset cycle carefully - is the free hours per month or per week? Usually if you change the configuration, the free hours quota might also be adjusted, or it might be billed separately. Google Colab, Kaggle, Databricks (?), so many others. Use GPTs to find out. Some might have restrictions on what you can and cannot install, so be sure to read what is included in a free vs paid tier.",
+        "answer": "Check the quota and reset cycle carefully - is the free hours per month or per week? Usually if you change the configuration, the free hours quota might also be adjusted, or it might be billed separately. Google Colab, Kaggle, Databricks (?), so many others. Use GPTs to find out. Some might have restrictions on what you can and cannot install, so be sure to read what is included in a free vs paid tier.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "Leaderboard - I am not on the leaderboard / how do I know which one I am on the leaderboard?",
-        "text": "When you set up your account you are automatically assigned a random name such as 'Lucid Elbakyan' for example. Click on the Jump to your record on the leaderboard link to find your entry. If you want to see what your Display name is, click on the Edit Course Profile button. First field is your nickname/displayed-name, change it if you want to be known as your Slack username or Github username or whatever nickname of your choice, if you want to remain anonymous. Unless you want 'Lucid Elbakyan' on your certificate, it is mandatory that you change the second field to your official name as in your identification documents - passport, national ID card, driver’s license, etc. This is the name that is going to appear on your Certificate!",
+        "answer": "When you set up your account you are automatically assigned a random name such as 'Lucid Elbakyan' for example. Click on the Jump to your record on the leaderboard link to find your entry. If you want to see what your Display name is, click on the Edit Course Profile button. First field is your nickname/displayed-name, change it if you want to be known as your Slack username or Github username or whatever nickname of your choice, if you want to remain anonymous. Unless you want 'Lucid Elbakyan' on your certificate, it is mandatory that you change the second field to your official name as in your identification documents - passport, national ID card, driver’s license, etc. This is the name that is going to appear on your Certificate!",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "Certificate - Can I follow the course in a self-paced mode and get a certificate?",
-        "text": "No, you can only get a certificate if you finish the course with a 'live' cohort. We don't award certificates for the self-paced mode. The reason is you need to peer-review 3 capstone(s) after submitting your own project. You can only peer-review projects at the time the course is running; after the form is closed and the peer-review list is compiled.",
+        "answer": "No, you can only get a certificate if you finish the course with a 'live' cohort. We don't award certificates for the self-paced mode. The reason is you need to peer-review 3 capstone(s) after submitting your own project. You can only peer-review projects at the time the course is running; after the form is closed and the peer-review list is compiled.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "I missed the first homework - can I still get a certificate?",
-        "text": "Yes, you need to pass the Capstone project to get the certificate. Homework is not mandatory, though it is recommended for reinforcing concepts, and the points awarded count towards your rank on the leaderboard.",
+        "answer": "Yes, you need to pass the Capstone project to get the certificate. Homework is not mandatory, though it is recommended for reinforcing concepts, and the points awarded count towards your rank on the leaderboard.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "I was working on next week’s homework/content - why does it keep changing?",
-        "text": "This course is being offered for the first time, and things will keep changing until a given module is ready, at which point it shall be announced. Working on the material/homework in advance will be at your own risk, as the final version could be different.",
+        "answer": "This course is being offered for the first time, and things will keep changing until a given module is ready, at which point it shall be announced. Working on the material/homework in advance will be at your own risk, as the final version could be different.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "When will the course be offered next?",
-        "text": "Summer 2025 (via Alexey).",
+        "answer": "Summer 2025 (via Alexey).",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     },
     {
         "question": "WSL2 - ResponseError: model requires more system memory (X.X GiB) than is available (Y.Y GiB). My system has more than X.X GiB.",
-        "text": "Your WSL2 is set to use Y.Y GiB, not all your computer memory. Create .wslconfig file under your Windows user profile directory (C:\\Users\\YourUsername\\.wslconfig) with the desired RAM allocation: [wsl2] memory=8GB. Restart WSL: wsl --shutdown. Run the free command to verify the changes. For more details, read this article.",
+        "answer": "Your WSL2 is set to use Y.Y GiB, not all your computer memory. Create .wslconfig file under your Windows user profile directory (C:\\Users\\YourUsername\\.wslconfig) with the desired RAM allocation: [wsl2] memory=8GB. Restart WSL: wsl --shutdown. Run the free command to verify the changes. For more details, read this article.",
         "course": "llm-zoomcamp",
         "section": "General course-related questions"
     }
