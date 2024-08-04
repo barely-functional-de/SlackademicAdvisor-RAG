@@ -13,7 +13,7 @@ def load_json(filename):
 
 def generate_id(entry):
     """Generate a unique ID based on the entry's properties."""
-    hash_input = (f"{entry['course']} - {entry['question']} - {entry['text'][:10]}").encode()
+    hash_input = (f"{entry['course']} - {entry['question']} - {entry['answer'][:10]}").encode()
     return hashlib.sha256(hash_input).hexdigest()[:10]
 
 def add_id_column(data):

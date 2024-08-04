@@ -24,14 +24,17 @@ def transform(data, data_2, *args, **kwargs):
     """
     # Specify your transformation logic here
     # Combine the DataFrames
-    llm_faq_df = data[['id', 'Question', 'Answer', 'Course']]
-    llm_channel_df = data_2[['id', 'Question', 'Answer', 'Course']]
-    llm_channel_df['Course'] = 'llm-zoomcamp'
+    llm_faq_df = data[['id', 'question', 'answer', 'course']]
+    llm_channel_df = data_2[['id', 'question', 'answer']]
+    llm_channel_df['course'] = 'llm-zoomcamp'
     combined_df = pd.concat([llm_faq_df, llm_channel_df], ignore_index=True)
     # Apply function to create chunks
     combined_df['Chunk'] = combined_df.apply(create_chunk, axis=1)
+    # Create the list of document dictionaries
+    documents = combined_df.apply(lambda row: {'chunk': row['Chunk'], 'document_id': row['id']}, axis=1).tolist()
 
-    return combined_df
+
+    return combined_df, documents
 
 
 @test
