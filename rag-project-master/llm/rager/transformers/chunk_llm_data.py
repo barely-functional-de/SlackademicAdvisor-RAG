@@ -29,12 +29,14 @@ def transform(data, data_2, *args, **kwargs):
     llm_channel_df['course'] = 'llm-zoomcamp'
     combined_df = pd.concat([llm_faq_df, llm_channel_df], ignore_index=True)
     # Apply function to create chunks
-    combined_df['Chunk'] = combined_df.apply(create_chunk, axis=1)
-    # Create the list of document dictionaries
-    documents = combined_df.apply(lambda row: {'chunk': row['Chunk'], 'document_id': row['id']}, axis=1).tolist()
+    combined_df['chunk'] = combined_df.apply(create_chunk, axis=1)
+    # create the list of dictionaries containing id and chunk
+    chunk_df = combined_df[['id', 'chunk']]
+    document = chunk_df.to_dict(orient='records')
 
 
-    return combined_df, documents
+
+    return combined_df, document
 
 
 @test
