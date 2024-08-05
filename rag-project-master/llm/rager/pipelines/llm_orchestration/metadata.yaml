@@ -60,19 +60,38 @@ blocks:
   configuration:
     file_source:
       path: rager/transformers/tokenize_llm_data.py
-  downstream_blocks: []
+  downstream_blocks:
+  - embed_llm_data
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
   name: tokenize_llm_data
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - chunk_llm_data
   uuid: tokenize_llm_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/embed_llm_data.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: embed_llm_data
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - tokenize_llm_data
+  uuid: embed_llm_data
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
