@@ -79,19 +79,38 @@ blocks:
   configuration:
     file_source:
       path: rager/transformers/embed_llm_data.py
-  downstream_blocks: []
+  downstream_blocks:
+  - export_llm_data
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
   name: embed_llm_data
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - tokenize_llm_data
   uuid: embed_llm_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/data_exporters/export_llm_data.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_llm_data
+  retry_config: null
+  status: failed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - embed_llm_data
+  uuid: export_llm_data
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -118,6 +137,7 @@ variables:
   data_path: /home/src/data/sample_data/*.json
   faq_data_path: /home/src/data/llm_faq.json
   faq_metadata_file: /home/src/data/metadata/processed_faq_metadata.json
+  index_name: llm_zoomcamp
   metadata_file: /home/src/data/metadata/processed_files_metadata.json
 variables_dir: /home/src/mage_data/rager
 widgets: []
