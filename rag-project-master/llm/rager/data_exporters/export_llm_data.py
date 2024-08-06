@@ -15,7 +15,7 @@ def elasticsearch(
     Exports document data to an Elasticsearch database.
     """
 
-    connection_string = kwargs.get('connection_string', 'http://rag-project-master-elasticsearch-1:9200')
+    connection_string = kwargs.get('connection_string', 'http://elasticsearch:9200')
     index_name = kwargs.get('index_name', 'documents')
     number_of_shards = kwargs.get('number_of_shards', 1)
     number_of_replicas = kwargs.get('number_of_replicas', 0)
