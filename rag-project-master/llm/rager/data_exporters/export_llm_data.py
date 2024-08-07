@@ -1,3 +1,4 @@
+import json
 from typing import Dict, List, Tuple, Union
 
 import numpy as np
@@ -15,7 +16,7 @@ def elasticsearch(
     Exports document data to an Elasticsearch database.
     """
 
-    connection_string = kwargs.get('connection_string', 'http://localhost:9200')
+    connection_string = kwargs.get('connection_string', 'http://elasticsearch:9200')
     index_name = kwargs.get('index_name', 'documents')
     number_of_shards = kwargs.get('number_of_shards', 1)
     number_of_replicas = kwargs.get('number_of_replicas', 0)
@@ -52,17 +53,17 @@ def elasticsearch(
     else:
         print(f'Index {index_name} already exists')
 
-    # print('Embedding dimensions:', dimensions)
+    print('Embedding dimensions:', dimensions)
 
-    # count = len(documents)
-    # print(f'Indexing {count} documents to Elasticsearch index {index_name}')
-    # for idx, document in enumerate(documents):
-    #     if idx % 100 == 0:
-    #         print(f'{idx + 1}/{count}')
+    count = len(documents)
+    print(f'Indexing {count} documents to Elasticsearch index {index_name}')
+    for idx, document in enumerate(documents):
+        if idx % 100 == 0:
+            print(f'{idx + 1}/{count}')
 
-    #     if isinstance(document['embedding'], np.ndarray):
-    #         document['embedding'] = document['embedding'].tolist()
+        if isinstance(document['embedding'], np.ndarray):
+            document['embedding'] = document['embedding'].tolist()
 
-    #     es_client.index(index=index_name, document=document)
+        es_client.index(index=index_name, document=document)
 
-    # return [[d['embedding'] for d in documents[:10]]]
+    return [[d['embedding'] for d in documents[:10]]]
