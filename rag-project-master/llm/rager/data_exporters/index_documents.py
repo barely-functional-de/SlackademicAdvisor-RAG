@@ -26,7 +26,6 @@ def export_data(es_client_status, documents, *args, **kwargs):
     """
     # Specify your data exporting logic here
     if es_client_status:
-        print("index docs")
         INDEX_NAME = os.getenv('INDEX_NAME')
         ELASTIC_URL = os.getenv('ELASTIC_URL')
         es_client = Elasticsearch(ELASTIC_URL)

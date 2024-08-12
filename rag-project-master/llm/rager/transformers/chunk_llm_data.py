@@ -30,9 +30,6 @@ def transform(data, data_2, *args, **kwargs):
     combined_df = pd.concat([llm_faq_df, llm_channel_df], ignore_index=True)
     # Apply function to create chunks
     combined_df['chunk'] = combined_df.apply(create_chunk, axis=1)
-    # create the list of dictionaries containing id and chunk
-    # chunk_df = combined_df[['id', 'chunk']]
-    # document = chunk_df.to_dict(orient='records')
     combined_df_dict = combined_df.to_dict(orient='records')
 
 

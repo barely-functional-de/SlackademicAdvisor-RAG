@@ -31,6 +31,7 @@ def setup_elasticsearch(INDEX_NAME, ELASTIC_URL):
     if es_client.indices.exists(index=INDEX_NAME):
         es_client.indices.delete(index=INDEX_NAME, ignore_unavailable=True)
         es_client.indices.create(index=INDEX_NAME, body=index_settings)
+        print(f"Elasticsearch index '{INDEX_NAME}' recreated")
     else:
         es_client.indices.create(index=INDEX_NAME, body=index_settings)
         print(f"Elasticsearch index '{INDEX_NAME}' created")
