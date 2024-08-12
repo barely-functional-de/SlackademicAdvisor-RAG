@@ -29,7 +29,8 @@ def setup_elasticsearch(INDEX_NAME, ELASTIC_URL):
 
     # Check if the index already exists
     if es_client.indices.exists(index=INDEX_NAME):
-        print(f"Elasticsearch index '{INDEX_NAME}' already exists. Skipping creation.")
+        es_client.indices.delete(index=INDEX_NAME, ignore_unavailable=True)
+        es_client.indices.create(index=INDEX_NAME, body=index_settings)
     else:
         es_client.indices.create(index=INDEX_NAME, body=index_settings)
         print(f"Elasticsearch index '{INDEX_NAME}' created")

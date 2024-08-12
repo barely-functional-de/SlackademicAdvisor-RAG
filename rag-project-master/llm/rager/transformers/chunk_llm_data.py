@@ -31,12 +31,13 @@ def transform(data, data_2, *args, **kwargs):
     # Apply function to create chunks
     combined_df['chunk'] = combined_df.apply(create_chunk, axis=1)
     # create the list of dictionaries containing id and chunk
-    chunk_df = combined_df[['id', 'chunk']]
-    document = chunk_df.to_dict(orient='records')
+    # chunk_df = combined_df[['id', 'chunk']]
+    # document = chunk_df.to_dict(orient='records')
+    combined_df_dict = combined_df.to_dict(orient='records')
 
 
 
-    return combined_df, document
+    return [combined_df_dict]
 
 
 @test
