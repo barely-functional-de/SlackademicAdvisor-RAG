@@ -41,8 +41,7 @@ blocks:
     file_source:
       path: rager/transformers/chunk_llm_data.py
   downstream_blocks:
-  - tokenize_llm_data
-  - load_model
+  - index_documents
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -61,7 +60,8 @@ blocks:
   configuration:
     file_source:
       path: rager/data_loaders/load_model.py
-  downstream_blocks: []
+  downstream_blocks:
+  - index_documents
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -71,65 +71,46 @@ blocks:
   status: updated
   timeout: null
   type: data_loader
-  upstream_blocks:
-  - chunk_llm_data
+  upstream_blocks: []
   uuid: load_model
 - all_upstream_blocks_executed: true
   color: null
   configuration:
     file_source:
-      path: rager/transformers/tokenize_llm_data.py
+      path: rager/data_exporters/setup_elasticsearch.py
   downstream_blocks:
-  - embed_llm_data
+  - index_documents
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: tokenize_llm_data
+  name: setup_elasticsearch
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
-  type: transformer
-  upstream_blocks:
-  - chunk_llm_data
-  uuid: tokenize_llm_data
-- all_upstream_blocks_executed: true
+  type: data_exporter
+  upstream_blocks: []
+  uuid: setup_elasticsearch
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_source:
-      path: rager/transformers/embed_llm_data.py
-  downstream_blocks:
-  - export_llm_data
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: embed_llm_data
-  retry_config: null
-  status: executed
-  timeout: null
-  type: transformer
-  upstream_blocks:
-  - tokenize_llm_data
-  uuid: embed_llm_data
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    file_source:
-      path: rager/data_exporters/export_llm_data.py
+      path: rager/data_exporters/index_documents.py
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: export_llm_data
+  name: index_documents
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - embed_llm_data
-  uuid: export_llm_data
+  - setup_elasticsearch
+  - load_model
+  - chunk_llm_data
+  uuid: index_documents
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

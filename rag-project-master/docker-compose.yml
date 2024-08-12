@@ -41,6 +41,8 @@ services:
       - ollama_data:/root/.ollama
     ports:
       - "${OLLAMA_PORT:-11434}:11434"
+    networks:
+      - app-network
   
   postgres:
     image: postgres:13
@@ -54,6 +56,8 @@ services:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.5.0
@@ -70,28 +74,28 @@ services:
     networks:
       - app-network
 
-  streamlit:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    env_file:
-      - .env
-    environment:
-      - ELASTIC_URL=http://elasticsearch:${ELASTIC_PORT:-9200}
-      - OLLAMA_URL=http://ollama:${OLLAMA_PORT:-11434}/v1/
-      - POSTGRES_HOST=postgres
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - MODEL_NAME=${MODEL_NAME}
-      - INDEX_NAME=${INDEX_NAME}
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-    ports:
-      - "${STREAMLIT_PORT:-8501}:8501"
-    depends_on:
-      - elasticsearch
-      - ollama
-      - postgres
+  # streamlit:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - ELASTIC_URL=http://elasticsearch:${ELASTIC_PORT:-9200}
+  #     - OLLAMA_URL=http://ollama:${OLLAMA_PORT:-11434}/v1/
+  #     - POSTGRES_HOST=postgres
+  #     - POSTGRES_DB=${POSTGRES_DB}
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #     - MODEL_NAME=${MODEL_NAME}
+  #     - INDEX_NAME=${INDEX_NAME}
+  #     - OPENAI_API_KEY=${OPENAI_API_KEY}
+  #   ports:
+  #     - "${STREAMLIT_PORT:-8501}:8501"
+  #   depends_on:
+  #     - elasticsearch
+  #     - ollama
+  #     - postgres
 
 volumes:
   elasticsearch_data:
