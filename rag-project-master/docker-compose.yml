@@ -4,16 +4,14 @@ services:
       - .env
     build:
       context: .
-    command: /bin/sh -c "/app/run_app.sh"
-    # command: /app/run_app.sh mage start $PROJECT_NAME
     ports:
       - "6789:6789"
       - "8501:8501"
     volumes:
       # Mount your local codebase to the container.
-      - .:/$MAGE_CODE_PATH
+      - .:/home/src
       # Store the data output on local machine to easily debug (optional).
-      - ~/.mage_data:/$MAGE_CODE_PATH/mage_data
+      - ~/.mage_data:/home/src/mage_data
     restart: on-failure:5
     networks:
       - app-network
@@ -32,7 +30,7 @@ services:
       - ~/.postgres/data:/var/lib/postgresql/data
       # Custom database initialization scripts (optional).
       - ./scripts/database:/docker-entrypoint-initdb.d
-    restart: always
+    restart: on-failure:5
     networks:
       - app-network
 
@@ -72,7 +70,7 @@ services:
       - "9300:9300"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
-    restart: always
+    restart: on-failure:5
     networks:
       - app-network
 

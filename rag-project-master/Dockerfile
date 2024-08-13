@@ -16,9 +16,4 @@ RUN pip3 install --no-cache-dir "git+https://github.com/mage-ai/mage-ai.git@td--
 
 ENV PYTHONPATH="${PYTHONPATH}:${MAGE_CODE_PATH}/${PROJECT_NAME}"
 
-# CMD /bin/bash -c "mage start $PROJECT_NAME & streamlit run ${USER_CODE_PATH}/app.py --server.port=8501 --server.address=0.0.0.0"
-# Create a script to run both Mage-AI and Streamlit
-RUN echo '#!/bin/bash\nmage start $PROJECT_NAME &\nstreamlit run ${USER_CODE_PATH}/app.py --server.port=8501 --server.address=0.0.0.0' > /app/run_app.sh
-RUN chmod +x /app/run_app.sh
-
-CMD ["/bin/sh", "-c", "/app/run_app.sh"]
+CMD ["bash", "-c", "mage start $PROJECT_NAME & streamlit run ${USER_CODE_PATH}/app.py --server.port=8501 --server.address=0.0.0.0"]
