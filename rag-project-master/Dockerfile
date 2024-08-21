@@ -16,4 +16,5 @@ RUN pip3 install --no-cache-dir "git+https://github.com/mage-ai/mage-ai.git@td--
 
 ENV PYTHONPATH="${PYTHONPATH}:${MAGE_CODE_PATH}/${PROJECT_NAME}"
 
-CMD ["/bin/sh", "-c", "/app/run_app.sh & streamlit run ${USER_CODE_PATH}/streamlit_app.py"]
+CMD ["/bin/sh", "-c", "/app/run_app.sh"]
+# & streamlit run ${USER_CODE_PATH}/streamlit_app.py
