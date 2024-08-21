@@ -4,8 +4,8 @@ services:
       - .env
     build:
       context: .
-    command: /bin/sh -c "/app/run_app.sh"
-    # command: /app/run_app.sh mage start $PROJECT_NAME
+    # command: /bin/sh -c "/app/run_app.sh"
+    command: /app/run_app.sh mage start $PROJECT_NAME
     ports:
       - "6789:6789"
       - "8501:8501"
@@ -19,6 +19,7 @@ services:
       - app-network
     depends_on:
       - magic-database
+      - elasticsearch
     stdin_open: true # used for interactive debugging
     tty: true # used for interactive debugging
 
