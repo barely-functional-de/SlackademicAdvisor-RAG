@@ -31,7 +31,19 @@ services:
       - ~/.postgres/data:/var/lib/postgresql/data
       # Custom database initialization scripts (optional).
       - ./scripts/database:/docker-entrypoint-initdb.d
-    restart: always
+    restart: on-failure:5
+    networks:
+      - app-network
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: faq0818@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: pgadmin_password
+    ports:
+      - "8080:80"
+    depends_on:
+      - magic-database
     networks:
       - app-network
 
@@ -71,7 +83,7 @@ services:
       - "9300:9300"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
-    restart: always
+    restart: on-failure:5
     networks:
       - app-network
 
@@ -98,7 +110,7 @@ services:
       - ollama
       - magic-database
       - magic-platform
-    command: ["streamlit", "run", "${MAGE_CODE_PATH}/llm/streamlit_app.py"]
+    command: ["streamlit", "run", "${MAGE_CODE_PATH}/llm/streamlit_app/streamlit_app.py"]
 
 volumes:
   elasticsearch_data:

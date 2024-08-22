@@ -51,5 +51,3 @@ def index_documents(es_client, documents, index_name):
         "successful_indexes": successful_indexes,
         "failed_indexes": failed_indexes,
     }
-
-from sentence_transformers import SentenceTransformer
