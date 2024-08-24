@@ -1,20 +1,21 @@
 import os
 import time
 import json
-import openai
+import openai 
 
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
 
+
 ELASTIC_URL = os.getenv("ELASTIC_URL", "http://elasticsearch:9200")
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://ollama:11434/v1/")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 INDEX_NAME = os.getenv('INDEX_NAME')
 
 es_client = Elasticsearch(ELASTIC_URL)
 # ollama_client = OpenAI(base_url=OLLAMA_URL, api_key="ollama")
 ollama_client = ''
-openai.api_key = OPENAI_API_KEY
+openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
 
@@ -70,7 +71,7 @@ def llm(prompt, model_choice):
             'total_tokens': response.usage.total_tokens
         }
     elif model_choice.startswith('openai/'):
-        response = openai.ChatCompletion.create(
+        response = openai_client.chat.completions.create(
             model=model_choice.split('/')[-1],
             messages=[{"role": "user", "content": prompt}]
         )
@@ -101,9 +102,12 @@ def calculate_openai_cost(model_choice, tokens):
 def get_answer(query, course, model_choice):
     vector = model.encode(query)
     search_results = elastic_search_knn('question_answer_vector', vector, course)
+    print('executed elastic_search_knn')
 
     prompt = build_prompt(query, search_results)
+    print('executed prompt')
     answer, tokens, response_time = llm(prompt, model_choice)
+    print('executed llm')
     
     # relevance, explanation, eval_tokens = evaluate_relevance(query, answer)
 
