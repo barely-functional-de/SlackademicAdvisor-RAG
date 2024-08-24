@@ -2,6 +2,7 @@
 import streamlit as st
 import time
 import uuid
+from assistant import get_answer
 
 def print_log(message):
     print(message, flush=True)
@@ -9,43 +10,43 @@ def print_log(message):
 def main():
     print_log("Starting the Course Assistant application")
     st.title("Welcome to SlackAdemic Advisor!")
-    st.write("Welcome to LLM Zoomcamp course.")
+    st.write("Please select a Zoomcamp course.")
 
-    # # Session state initialization
-    # if 'conversation_id' not in st.session_state:
-    #     st.session_state.conversation_id = str(uuid.uuid4())
-    #     print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
-    # if 'count' not in st.session_state:
-    #     st.session_state.count = 0
-    #     print_log("Feedback count initialized to 0")
+    # Session state initialization
+    if 'conversation_id' not in st.session_state:
+        st.session_state.conversation_id = str(uuid.uuid4())
+        print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
+    if 'count' not in st.session_state:
+        st.session_state.count = 0
+        print_log("Feedback count initialized to 0")
 
-    # # Course selection
-    # course = st.selectbox(
-    #     "Select a course:",
-    #     ["machine-learning-zoomcamp", "data-engineering-zoomcamp", "mlops-zoomcamp"]
-    # )
-    # print_log(f"User selected course: {course}")
+    # Course selection
+    course = st.selectbox(
+        "Select a course:",
+        ["machine-learning-zoomcamp", "data-engineering-zoomcamp", "llm-zoomcamp"]
+    )
+    print_log(f"User selected course: {course}")
 
-    # # Model selection
-    # model_choice = st.selectbox(
-    #     "Select a model:",
-    #     ["OpenAI GPT3.5", "GPT4o-mini"]
-    # )
-    # print_log(f"User selected model: {model_choice}")
+    # Model selection
+    model_choice = st.selectbox(
+        "Select a model:",
+        ["ollama/phi3", "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
+    )
+    print_log(f"User selected model: {model_choice}")
 
-    # # User input
-    # user_input = st.text_input("Enter your question:")
+    # User input
+    user_input = st.text_input("Enter your question:")
 
-    # if st.button("Ask"):
-    #     print_log(f"User asked: '{user_input}'")
-    #     with st.spinner('Processing...'):
-    #         print_log(f"Getting answer from assistant using {model_choice} model")
-    #         start_time = time.time()
-    #         answer_data = get_answer(user_input, course, model_choice)
-    #         end_time = time.time()
-    #         print_log(f"Answer received in {end_time - start_time:.2f} seconds")
-    #         st.success("Completed!")
-    #         st.write(answer_data['answer'])
+    if st.button("Ask"):
+        print_log(f"User asked: '{user_input}'")
+        with st.spinner('Processing...'):
+            print_log(f"Getting answer from assistant using {model_choice} model")
+            start_time = time.time()
+            answer_data = get_answer(user_input, course, model_choice)
+            end_time = time.time()
+            print_log(f"Answer received in {end_time - start_time:.2f} seconds")
+            st.success("Completed!")
+            st.write(answer_data['answer'])
             
     #         # Display monitoring information
     #         st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
