@@ -1,7 +1,7 @@
 import os
 import time
 import json
-import openai 
+from openai import OpenAI
 
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
@@ -15,7 +15,7 @@ INDEX_NAME = os.getenv('INDEX_NAME')
 es_client = Elasticsearch(ELASTIC_URL)
 # ollama_client = OpenAI(base_url=OLLAMA_URL, api_key="ollama")
 ollama_client = ''
-openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
 
@@ -33,8 +33,10 @@ def elastic_search_knn(field, vector, course):
         "knn": knn,
         "_source": ["answer", "question", "course", "id"],
     }
+    print('executing es_client.search()')
 
     es_results = es_client.search(index=INDEX_NAME, body=search_query)
+    print('executed es_client.search()')
 
     return [hit["_source"] for hit in es_results["hits"]["hits"]]
 
@@ -101,6 +103,7 @@ def calculate_openai_cost(model_choice, tokens):
 
 def get_answer(query, course, model_choice):
     vector = model.encode(query)
+    print('executed model.encode()')
     search_results = elastic_search_knn('question_answer_vector', vector, course)
     print('executed elastic_search_knn')
 

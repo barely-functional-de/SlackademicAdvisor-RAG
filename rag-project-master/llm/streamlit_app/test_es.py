@@ -16,11 +16,12 @@ except Exception as e:
 
 
 def test_get_answer():
-    query = "What is a vector database?"
+    query = "How to create a Saturn account?"
     course = "llm-zoomcamp"
     model_choice = "openai/gpt-3.5-turbo"  # Replace with your model choice
 
     try:
+        print('calling get_answer()')
         result = get_answer(query, course, model_choice)
         print("Result:", result)
     except Exception as e:

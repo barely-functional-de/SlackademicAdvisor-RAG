@@ -110,7 +110,13 @@ services:
       - ollama
       - magic-database
       - magic-platform
-    command: ["streamlit", "run", "${MAGE_CODE_PATH}/llm/streamlit_app/streamlit_app.py"]
+    volumes:
+      - .:/app
+    command: /bin/bash -c "pip install --upgrade -r /app/llm/requirements.txt && streamlit run ${MAGE_CODE_PATH}/llm/streamlit_app/streamlit_app.py"
+    # command: /bin/bash -c "pip install --upgrade openai==1.42.0 && streamlit run ${MAGE_CODE_PATH}/llm/streamlit_app/streamlit_app.py"
+    # command: ["streamlit", "run", "${MAGE_CODE_PATH}/llm/streamlit_app/streamlit_app.py"]
+    networks:
+      - app-network
 
 volumes:
   elasticsearch_data:
