@@ -68,12 +68,12 @@ blocks:
   language: python
   name: setup_elasticsearch
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: data_exporter
   upstream_blocks: []
   uuid: setup_elasticsearch
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_source:
@@ -94,7 +94,7 @@ blocks:
   - setup_elasticsearch
   - chunk_llm_data
   uuid: index_documents
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_source:
@@ -112,7 +112,7 @@ blocks:
   upstream_blocks:
   - index_documents
   uuid: init_postgres_database
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_path: rager/data_loaders/elasticsearch_query_block.py
