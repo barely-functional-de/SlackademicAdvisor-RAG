@@ -49,12 +49,12 @@ def main():
             st.write(answer_data['answer'])
             
     #         # Display monitoring information
-    #         st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
+            st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
     #         st.write(f"Relevance: {answer_data['relevance']}")
-    #         st.write(f"Model used: {answer_data['model_used']}")
-    #         st.write(f"Total tokens: {answer_data['total_tokens']}")
-    #         if answer_data['openai_cost'] > 0:
-    #             st.write(f"OpenAI cost: ${answer_data['openai_cost']:.4f}")
+            st.write(f"Model used: {answer_data['model_used']}")
+            st.write(f"Total tokens: {answer_data['total_tokens']}")
+            if answer_data['openai_cost'] > 0:
+                st.write(f"OpenAI cost: ${answer_data['openai_cost']:.4f}")
 
     #         # Save conversation to database
     #         print_log("Saving conversation to database")
