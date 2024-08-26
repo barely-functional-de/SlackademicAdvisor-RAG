@@ -29,7 +29,7 @@ def main():
     # Model selection
     model_choice = st.selectbox(
         "Select a model:",
-        ["ollama/llama2", "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
+        ["ollama/tinyllama", "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
     )
     print_log(f"User selected model: {model_choice}")
 
