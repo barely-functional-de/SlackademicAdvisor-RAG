@@ -10,7 +10,6 @@ def print_log(message):
 def main():
     print_log("Starting the Course Assistant application")
     st.title("Welcome to SlackAdemic Advisor!")
-    st.write("Please select a Zoomcamp course.")
 
     # Session state initialization
     if 'conversation_id' not in st.session_state:
@@ -30,7 +29,7 @@ def main():
     # Model selection
     model_choice = st.selectbox(
         "Select a model:",
-        ["ollama/phi3", "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
+        ["ollama/llama2", "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
     )
     print_log(f"User selected model: {model_choice}")
 

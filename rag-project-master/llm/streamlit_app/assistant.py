@@ -13,8 +13,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 INDEX_NAME = os.getenv('INDEX_NAME')
 
 es_client = Elasticsearch(ELASTIC_URL)
-# ollama_client = OpenAI(base_url=OLLAMA_URL, api_key="ollama")
-ollama_client = ''
+ollama_client = OpenAI(base_url=OLLAMA_URL, api_key="ollama")
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
@@ -93,7 +92,6 @@ def llm(prompt, model_choice):
 
 def calculate_openai_cost(model_choice, tokens):
     openai_cost = 0
-
     if model_choice == 'openai/gpt-3.5-turbo':
         openai_cost = (tokens['prompt_tokens'] * 0.0015 + tokens['completion_tokens'] * 0.002) / 1000
     elif model_choice in ['openai/gpt-4o', 'openai/gpt-4o-mini']:
