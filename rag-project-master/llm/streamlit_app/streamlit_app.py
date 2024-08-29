@@ -3,6 +3,7 @@ import streamlit as st
 import time
 import uuid
 from assistant import get_answer
+from llm.utils.helpers.db import (save_conversation, get_recent_conversations)
 
 def print_log(message):
     print(message, flush=True)
@@ -55,10 +56,27 @@ def main():
             if answer_data['openai_cost'] > 0:
                 st.write(f"OpenAI cost: ${answer_data['openai_cost']:.4f}")
 
-    #         # Save conversation to database
-    #         print_log("Saving conversation to database")
-    #         save_conversation(st.session_state.conversation_id, user_input, answer_data, course)
-    #         print_log("Conversation saved successfully")
+            # Save conversation to database
+            print_log("Saving conversation to database")
+            save_conversation(st.session_state.conversation_id, user_input, answer_data, course)
+            print_log("Conversation saved successfully")
+            # Generate a new conversation ID for next question
+            st.session_state.conversation_id = str(uuid.uuid4())
+
+    # Display recent conversations
+    st.subheader("Recent Conversations")
+    relevance_filter = st.selectbox(
+        "Filter by relevance:", ["All", "RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"]
+    )
+    recent_conversations = get_recent_conversations(
+        limit=5, relevance=relevance_filter if relevance_filter != "All" else None
+    )
+    for conv in recent_conversations:
+        st.write(f"Q: {conv['question']}")
+        st.write(f"A: {conv['answer']}")
+        st.write(f"Relevance: {conv['relevance']}")
+        st.write(f"Model: {conv['model_used']}")
+        st.write("---")
 
     # # Feedback buttons
     # col1, col2 = st.columns(2)

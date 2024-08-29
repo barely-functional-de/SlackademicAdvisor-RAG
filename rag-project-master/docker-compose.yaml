@@ -34,18 +34,6 @@ services:
     restart: on-failure:5
     networks:
       - app-network
-  
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: faq0818@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: pgadmin_password
-    ports:
-      - "8080:80"
-    depends_on:
-      - magic-database
-    networks:
-      - app-network
 
   ollama:
     image: ollama/ollama

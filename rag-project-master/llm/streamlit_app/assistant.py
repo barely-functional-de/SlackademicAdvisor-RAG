@@ -99,6 +99,36 @@ def calculate_openai_cost(model_choice, tokens):
 
     return openai_cost
 
+def evaluate_relevance(question, answer):
+    prompt_template = """
+    You are an expert evaluator for a Retrieval-Augmented Generation (RAG) system.
+    Your task is to analyze the relevance of the generated answer to the given question.
+    Based on the relevance of the generated answer, you will classify it
+    as "NON_RELEVANT", "PARTLY_RELEVANT", or "RELEVANT".
+
+    Here is the data for evaluation:
+
+    Question: {question}
+    Generated Answer: {answer}
+
+    Please analyze the content and context of the generated answer in relation to the question
+    and provide your evaluation in parsable JSON without using code blocks:
+
+    {{
+      "Relevance": "NON_RELEVANT" | "PARTLY_RELEVANT" | "RELEVANT",
+      "Explanation": "[Provide a brief explanation for your evaluation]"
+    }}
+    """.strip()
+
+    prompt = prompt_template.format(question=question, answer=answer)
+    evaluation, tokens, _ = llm(prompt, 'openai/gpt-3.5-turbo')
+    
+    try:
+        json_eval = json.loads(evaluation)
+        return json_eval['Relevance'], json_eval['Explanation'], tokens
+    except json.JSONDecodeError:
+        return "UNKNOWN", "Failed to parse evaluation", tokens
+
 def get_answer(query, course, model_choice):
     vector = model.encode(query)
     print('executed model.encode()')
@@ -110,21 +140,21 @@ def get_answer(query, course, model_choice):
     answer, tokens, response_time = llm(prompt, model_choice)
     print('executed llm')
     
-    # relevance, explanation, eval_tokens = evaluate_relevance(query, answer)
+    relevance, explanation, eval_tokens = evaluate_relevance(query, answer)
 
     openai_cost = calculate_openai_cost(model_choice, tokens)
  
     return {
         'answer': answer,
         'response_time': response_time,
-        # 'relevance': relevance,
-        # 'relevance_explanation': explanation,
+        'relevance': relevance,
+        'relevance_explanation': explanation,
         'model_used': model_choice,
         'prompt_tokens': tokens['prompt_tokens'],
         'completion_tokens': tokens['completion_tokens'],
         'total_tokens': tokens['total_tokens'],
-        # 'eval_prompt_tokens': eval_tokens['prompt_tokens'],
-        # 'eval_completion_tokens': eval_tokens['completion_tokens'],
-        # 'eval_total_tokens': eval_tokens['total_tokens'],
+        'eval_prompt_tokens': eval_tokens['prompt_tokens'],
+        'eval_completion_tokens': eval_tokens['completion_tokens'],
+        'eval_total_tokens': eval_tokens['total_tokens'],
         'openai_cost': openai_cost
     }
