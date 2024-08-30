@@ -48,7 +48,7 @@ blocks:
   language: python
   name: chunk_llm_data
   retry_config: null
-  status: failed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:

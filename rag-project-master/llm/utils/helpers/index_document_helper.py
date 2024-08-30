@@ -28,7 +28,7 @@ def index_documents(es_client, documents, index_name):
             doc["question_answer_vector"] = encoded_vector
 
             try:
-                response = es_client.index(index=index_name, document=doc)
+                response = es_client.index(index=index_name, id=doc['id'], document=doc)
                 # Check if the document was successfully indexed
                 if response.get('result') in ['created', 'updated']:
                     successful_indexes += 1

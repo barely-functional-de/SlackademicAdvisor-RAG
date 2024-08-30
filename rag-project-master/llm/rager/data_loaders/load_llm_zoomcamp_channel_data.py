@@ -29,6 +29,7 @@ def load_data(*args, **kwargs):
     processed_files = load_existing_metadata(metadata_file)
     print(f'processed files: {processed_files}')
     new_files = scan_for_new_files(data_path, processed_files)
+    print(new_files)
 
     if not new_files:
         print("No new files to process.")
@@ -38,12 +39,13 @@ def load_data(*args, **kwargs):
         print(f'new_files: {new_files}')
         data = read_json_files(new_files)
         ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps = process_messages(data)
-        df = create_dataframe(ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps)
-        processed_files.extend(new_files)
-        update_metadata(processed_files, metadata_file)
+        print(ids)
+        # df = create_dataframe(ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps)
+    #     processed_files.extend(new_files)
+    #     update_metadata(processed_files, metadata_file)
 
 
-    return df
+    # return df
 
 
 # @test

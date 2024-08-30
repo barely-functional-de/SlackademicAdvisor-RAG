@@ -54,9 +54,6 @@ def transform(data, data_2, *args, **kwargs):
     # Convert to dictionary format
     combined_df_dict = combined_df.to_dict(orient='records')
 
-
-
-
     return [combined_df_dict]
 
 
