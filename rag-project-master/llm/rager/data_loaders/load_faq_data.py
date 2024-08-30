@@ -30,9 +30,13 @@ def load_data(*args, **kwargs):
     new_entries = filter_new_entries(data_with_ids, faq_metadata_file)
     if new_entries:
         print(f"{len(new_entries)} new entries")
-    update_metadata(new_entries, faq_metadata_file)
-    
-    return pd.DataFrame(new_entries)
+        new_entries_df = pd.DataFrame(new_entries)
+        update_metadata(new_entries, faq_metadata_file)
+    else:
+        # raise Exception('No new entry to FAQ file added')
+        new_entries_df = pd.DataFrame([{'empty': 'True'}])
+
+    return new_entries_df
 
 
 
