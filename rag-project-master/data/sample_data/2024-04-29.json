@@ -1,0 +1,110 @@
+[
+    {
+        "user": "U06SU5HPXGU",
+        "type": "message",
+        "ts": "1714376623.848239",
+        "client_msg_id": "f1c0c06b-5523-4f3b-8202-9400992878c1",
+        "text": "Hi <@U01AXE0P5M3> just want to know a little more, if we will deploy the application on cloud services?",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "200566d9a27f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-04\/6903091385686_200566d9a27f85e632ac_72.jpg",
+            "first_name": "Galvan",
+            "real_name": "Galvan Goh",
+            "display_name": "Galvan Goh",
+            "team": "T01ATQK62F8",
+            "name": "galvangjx",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713949515.145499",
+        "parent_user_id": "U06SU5HPXGU",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Pq1XW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01AXE0P5M3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just want to know a little more, if we will deploy the application on cloud services?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01AXE0P5M3",
+        "type": "message",
+        "ts": "1714380205.174259",
+        "client_msg_id": "424413a7-54e1-4883-b83b-71a8249c0b9a",
+        "text": "I initially planned only to show it locally, but actually it shouldn't be too difficult to also show cloud deployment",
+        "team": "T01ATQK62F8",
+        "user_team": "T01ATQK62F8",
+        "source_team": "T01ATQK62F8",
+        "user_profile": {
+            "avatar_hash": "5d85aa9128aa",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-09-20\/1387999194193_5d85aa9128aa35b9fcee_72.jpg",
+            "first_name": "Alexey",
+            "real_name": "Alexey Grigorev",
+            "display_name": "Alexey Grigorev",
+            "team": "T01ATQK62F8",
+            "name": "alexey.s.grigoriev",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713949515.145499",
+        "parent_user_id": "U06SU5HPXGU",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vnAEL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I initially planned only to show it locally, but actually it shouldn't be too difficult to also show cloud deployment"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart_hands",
+                "users": [
+                    "U06SU5HPXGU",
+                    "U03GSLHMCD6",
+                    "U045549Q6L9",
+                    "U04EULUA3FB",
+                    "U05C01W3KN1"
+                ],
+                "count": 5
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U03EK65SHD1"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

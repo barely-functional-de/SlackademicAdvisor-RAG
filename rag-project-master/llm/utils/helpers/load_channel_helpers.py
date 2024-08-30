@@ -13,7 +13,7 @@ def read_json_files(file_paths):
             all_data.extend(data)
     return all_data
 
-def process_messages(data):
+def process_messages_bkp(data):
     questions = []
     question_askers = []
     question_timestamps = []
@@ -24,6 +24,7 @@ def process_messages(data):
 
     # Dictionary to map thread_ts to the original question message
     thread_dict = {}
+    message_dict = {msg["ts"]: msg for msg in data}
 
     for message in data:
         if "subtype" not in message and message.get("text"):
@@ -38,18 +39,19 @@ def process_messages(data):
                     ids.append(question_id)
                     
                     # Map the thread_ts to the question's timestamp
-                    thread_dict[message["thread_ts"]] = {
+                    thread_dict[message["ts"]] = {
                         "question_text": message["text"],
                         "question_user": message["user_profile"]["real_name"],
                         "question_ts": message["ts"],
                         "question_id": question_id
                     }
     
-    # Iterate through messages again to find answers
+    # Find answers to the questions
     for message in data:
-        if "subtype" not in message and message.get("text") and "thread_ts" in message:
-            thread_ts = message["thread_ts"]
-            if thread_ts in thread_dict:
+        if "subtype" not in message and message.get("text"):
+            # Only process messages with a valid thread_ts that is in thread_dict
+            thread_ts = message.get("thread_ts")
+            if thread_ts and thread_ts in thread_dict:
                 question_info = thread_dict[thread_ts]
                 if message["user_profile"]["real_name"] != question_info["question_user"]:
                     answer, answer_by, answer_ts = find_answer(message, message_dict)
@@ -59,7 +61,7 @@ def process_messages(data):
 
     return ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps
 
-def find_answer(message, message_dict):
+def find_answer_bkp(message, message_dict):
     # Check for replies
     if "replies" in message:
         # First, look for replies by Alexey Grigorev
@@ -80,7 +82,7 @@ def find_answer(message, message_dict):
 
 
 # Function to process messages and extract questions
-def process_messages_bkp(data):
+def process_messages(data):
     questions = []
     question_askers = []
     question_timestamps = []
@@ -110,7 +112,7 @@ def process_messages_bkp(data):
     return ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps
 
 # Function to find an answer to a question
-def find_answer_bkp(message, message_dict):
+def find_answer(message, message_dict):
     if "replies" in message:
         for reply in message["replies"]:
             reply_message = message_dict.get(reply["ts"])

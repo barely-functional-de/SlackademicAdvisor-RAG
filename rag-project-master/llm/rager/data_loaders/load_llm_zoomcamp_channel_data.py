@@ -39,13 +39,13 @@ def load_data(*args, **kwargs):
         print(f'new_files: {new_files}')
         data = read_json_files(new_files)
         ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps = process_messages(data)
-        print(ids)
-        # df = create_dataframe(ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps)
-    #     processed_files.extend(new_files)
-    #     update_metadata(processed_files, metadata_file)
+        df = create_dataframe(ids, questions, question_askers, question_timestamps, answers, answered_by, answer_timestamps)
+        if df.empty:
+            df = pd.DataFrame([{'empty': 'True'}])
+        processed_files.extend(new_files)
+        update_metadata(processed_files, metadata_file)
 
-
-    # return df
+    return df
 
 
 # @test
