@@ -1,5 +1,21 @@
 # SlackademicAdvisor-RAG
 
+## Index
+
+1. [Problem Statement](#problem-statement)
+2. [About](#about)
+3. [Features](#features)
+4. [Technologies](#technologies)
+5. [Project Structure](#project-structure)
+6. [Reproducibility](#reproducibility)
+7. [Conclusion](#conclusion)
+
+---
+
+## Problem Statement
+
+The **SlackademicAdvisor-RAG** project aims to solve the problem of efficiently answering student queries by combining FAQ data from the LLM-Zoomcamp course repository and daily discussions from a dedicated Slack channel. This ensures that students have access to a comprehensive and up-to-date knowledge base, helping them find answers quickly and reducing the need for repetitive questions.
+
 ## About
 
 **SlackademicAdvisor-RAG** is designed to streamline the onboarding process for students taking the LLM-Zoomcamp course. The LLM-Zoomcamp course repository includes a dedicated FAQ section with numerous subsections per module to address questions, alongside a vibrant Slack channel where daily discussions and queries take place. **SlackademicAdvisor-RAG** leverages these two data sources—FAQ and Slack channel data—to create a vector document that serves as a comprehensive base/ground-truth for answering any questions that new or existing students might have.
@@ -11,6 +27,25 @@
 - Creation of a vector document for efficient question-answering.
 - Retrieval-Augmented Generation (RAG) to provide accurate responses to student queries.
 - Monthly updates and indexing of new data based on DataTalks Club #slack-dump.
+
+## Technologies
+
+- **LLM**: 
+  - "ollama/tinyllama"
+  - "openai/gpt-3.5-turbo"
+  - "openai/gpt-4o-mini"
+  
+- **Knowledge Base**: 
+  - Elasticsearch
+  
+- **Monitoring**: 
+  - Grafana
+  
+- **Interface**: 
+  - Streamlit
+  
+- **Ingestion Pipeline**: 
+  - Mage-ai
 
 ## Project Structure
 
@@ -82,30 +117,8 @@ For monitoring, the project uses **Grafana**:
 
 
 
-## Problem Statement
+## Reproducibility
 
-The **SlackademicAdvisor-RAG** project aims to solve the problem of efficiently answering student queries by combining FAQ data from the LLM-Zoomcamp course repository and daily discussions from a dedicated Slack channel. This ensures that students have access to a comprehensive and up-to-date knowledge base, helping them find answers quickly and reducing the need for repetitive questions.
-
-## Technologies
-
-- **LLM**: 
-  - "ollama/tinyllama"
-  - "openai/gpt-3.5-turbo"
-  - "openai/gpt-4o-mini"
-  
-- **Knowledge Base**: 
-  - Elasticsearch
-  
-- **Monitoring**: 
-  - Grafana
-  
-- **Interface**: 
-  - Streamlit
-  
-- **Ingestion Pipeline**: 
-  - Mage-ai
-
-### Reproducibility
 Clear instructions and paths to all required datasets and code are provided to ensure that the project can be easily reproduced and evaluated.
 
 ## Conclusion
