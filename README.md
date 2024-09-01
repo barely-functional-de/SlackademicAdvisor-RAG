@@ -42,8 +42,8 @@ The project uses **Mage-ai** for orchestrating the pipeline blocks:
 7. **Elasticsearch_query_block**:
    - Tests Elasticsearch by querying the index storing the relevant information.
 
-- ![Mage-ai Pipeline](./readme/orchestrator/mage-ai.png)
-- ![Mage-ai Pipeline Variables](./readme/orchestrator/mage-ai-variable.png)
+- ![Mage-ai Pipeline](./readme/orchestrator/mageai_pipeline.PNG)
+- ![Mage-ai Pipeline Variables](./readme/orchestrator/mageai_pipeline_runtime_variables.PNG)
 
 ### Streamlit Interface
 
