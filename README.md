@@ -108,12 +108,12 @@ For monitoring, the project uses **Grafana**:
 
 - **Grafana** is dependent on the PostgreSQL `conversations` table.
 - Creates a dashboard with panels for:
-  - **Response Time**
-  - **Relevance Distribution**
-  - **Model Usage**
-  - **Token Usage**
-  - **OpenAI Cost**
-  - **Recent Conversations**
+  - Response Time
+  - Relevance Distribution
+  - Model Usage
+  - Token Usage
+  - OpenAI Cost
+  - Recent Conversations
 
 
 
