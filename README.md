@@ -119,8 +119,8 @@ For monitoring, the project uses **Grafana**:
 
 ## Reproducibility
 
-Clear instructions and paths to all required datasets and code are provided to ensure that the project can be easily reproduced and evaluated.
+Clear instructions to be provided to ensure that the project can be easily reproduced and evaluated.
 
 ## Conclusion
 
-**SlackademicAdvisor-RAG** is an end-to-end RAG application that effectively combines Slack discussions and FAQ data to create a powerful and responsive system for assisting LLM-Zoomcamp students. The project is thoroughly evaluated, well-documented, and deployable, making it a valuable tool for both students and educators.
+**SlackademicAdvisor-RAG** is an end-to-end RAG application that effectively combines Slack discussions and FAQ data to create a powerful and responsive system for assisting LLM-Zoomcamp students. Hence, making it a valuable tool for both students and educators.
