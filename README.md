@@ -16,7 +16,9 @@
 
 ### Pipeline Blocks
 
-The project uses **Mage-ai** for orchestrating the pipeline blocks:
+The project uses **Mage-ai** for orchestrating the pipeline blocks
+![Mage-ai Pipeline](./readme/orchestrator/mageai_pipeline.PNG)
+![Mage-ai Pipeline Variables](./readme/orchestrator/mageai_pipeline_runtime_variables.PNG)
 
 1. **Load_llm_zoomcamp_channel_data**:
    - Reads LLM-Zoomcamp channel data from the Slack dump folder specified in the `data_path` pipeline variable. 
@@ -42,12 +44,11 @@ The project uses **Mage-ai** for orchestrating the pipeline blocks:
 7. **Elasticsearch_query_block**:
    - Tests Elasticsearch by querying the index storing the relevant information.
 
-- ![Mage-ai Pipeline](./readme/orchestrator/mageai_pipeline.PNG)
-- ![Mage-ai Pipeline Variables](./readme/orchestrator/mageai_pipeline_runtime_variables.PNG)
 
 ### Streamlit Interface
 
 The project includes a **Streamlit** interface for the application:
+![Streamlit UI](./readme/user_interface/streamlit_ui.PNG)
 
 - **Sidebar (Settings)**: 
   - Contains course and model selection options for user queries.
@@ -63,11 +64,12 @@ The project includes a **Streamlit** interface for the application:
   - Displays the latest search history for the last 10 conversations.
   - Expander for each conversation includes details like Question, Answer, Relevance, Model, and Timestamp.
 
-- ![Streamlit UI](./readme/streamlit/pic.png)
+
 
 ### Monitoring with Grafana
 
 For monitoring, the project uses **Grafana**:
+![Grafana UI](./readme/monitor/monitoring_grafana.PNG)
 
 - **Grafana** is dependent on the PostgreSQL `conversations` table.
 - Creates a dashboard with panels for:
@@ -78,7 +80,7 @@ For monitoring, the project uses **Grafana**:
   - **OpenAI Cost**
   - **Recent Conversations**
 
-- ![Grafana UI](./readme/monitoring/grafana.png)
+
 
 ## Problem Statement
 
