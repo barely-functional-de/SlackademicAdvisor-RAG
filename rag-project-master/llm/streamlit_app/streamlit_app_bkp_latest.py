@@ -49,46 +49,41 @@ def main():
                 end_time = time.time()
                 print_log(f"Answer received in {end_time - start_time:.2f} seconds")
                 
+                st.success("Answer:")
+                st.write(answer_data['answer'])
+                
+                with st.expander("Answer Details"):
+                    st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
+                    st.write(f"Model used: {answer_data['model_used']}")
+                    st.write(f"Total tokens: {answer_data['total_tokens']}")
+                    if answer_data['openai_cost'] > 0:
+                        st.write(f"OpenAI cost: ${answer_data['openai_cost']:.4f}")
+
                 # Save conversation to database
                 print_log("Saving conversation to database")
-                conversation_id = str(uuid.uuid4())
-                save_conversation(conversation_id, user_input, answer_data, course)
+                save_conversation(st.session_state.conversation_id, user_input, answer_data, course)
                 print_log("Conversation saved successfully")
 
-                st.session_state.answer_data = answer_data
-                st.session_state.user_input = user_input
-                st.session_state.conversation_id = conversation_id
-                st.session_state.show_feedback = True
+                # User feedback section
+                st.subheader("Provide Feedback")
+                rating = st.slider("Rate the answer (1-5 stars)", 1, 5, 3)
+                relevance = st.selectbox("How relevant was the answer?", 
+                                        ["Relevant", "Partly Relevant", "Not Relevant"])
+                usefulness = st.selectbox("Was this answer useful?", ["Yes", "Somewhat", "No"])
+                comments = st.text_area("Additional comments (optional)")
+                
+                if st.button("Submit Feedback"):
+                    feedback_data = {
+                        "user_rating": rating,
+                        "user_relevance": relevance,
+                        "user_usefulness": usefulness,
+                        "user_comments": comments
+                    }
+                    save_feedback(st.session_state.conversation_id, feedback_data)
+                    st.success("Thank you for your feedback!")
 
-        if 'show_feedback' in st.session_state and st.session_state.show_feedback:
-            st.success("Answer:")
-            st.write(st.session_state.answer_data['answer'])
-            
-            with st.expander("Answer Details"):
-                st.write(f"Response time: {st.session_state.answer_data['response_time']:.2f} seconds")
-                st.write(f"Model used: {st.session_state.answer_data['model_used']}")
-                st.write(f"Total tokens: {st.session_state.answer_data['total_tokens']}")
-                if st.session_state.answer_data['openai_cost'] > 0:
-                    st.write(f"OpenAI cost: ${st.session_state.answer_data['openai_cost']:.4f}")
-
-            # User feedback section
-            st.subheader("Provide Feedback")
-            rating = st.slider("Rate the answer (1-5 stars)", 1, 5, 3, key="rating")
-            relevance = st.selectbox("How relevant was the answer?", 
-                                    ["Relevant", "Partly Relevant", "Not Relevant"], key="relevance")
-            usefulness = st.selectbox("Was this answer useful?", ["Yes", "Somewhat", "No"], key="usefulness")
-            comments = st.text_area("Additional comments (optional)", key="comments")
-            
-            if st.button("Submit Feedback"):
-                feedback_data = {
-                    "user_rating": rating,
-                    "user_relevance": relevance,
-                    "user_usefulness": usefulness,
-                    "user_comments": comments
-                }
-                save_feedback(st.session_state.conversation_id, feedback_data)
-                st.success("Thank you for your feedback!")
-                st.session_state.show_feedback = False
+                # Generate a new conversation ID for next question
+                st.session_state.conversation_id = str(uuid.uuid4())
 
     with col2:
         st.header("Conversation History")

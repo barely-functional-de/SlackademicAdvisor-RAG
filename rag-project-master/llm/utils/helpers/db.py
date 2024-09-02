@@ -43,10 +43,13 @@ def init_db():
                 )
             """)
             cur.execute("""
-                CREATE TABLE IF NOT EXISTS feedback (
+                CREATE TABLE IF NOT EXISTS user_feedback (
                     id SERIAL PRIMARY KEY,
                     conversation_id TEXT REFERENCES conversations(id),
-                    feedback INTEGER NOT NULL,
+                    user_rating INTEGER NULL, 
+                    user_relevance TEXT NULL, 
+                    user_usefulness TEXT NULL, 
+                    user_comments TEXT NULL,
                     timestamp TIMESTAMP WITH TIME ZONE NOT NULL
                 )
             """)
@@ -120,5 +123,33 @@ def get_recent_conversations(limit=5, relevance=None):
 
             cur.execute(query, (limit,))
             return cur.fetchall()
+    finally:
+        conn.close()
+
+def save_feedback(conversation_id, feedback_data, timestamp=None):
+    if timestamp is None:
+        timestamp = datetime.now(tz)
+    
+    conn = get_db_connection()
+    try:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                INSERT INTO user_feedback 
+                (conversation_id, user_rating, user_relevance, user_usefulness, user_comments, timestamp)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """,
+                (
+                    conversation_id,
+                    feedback_data["user_rating"],
+                    feedback_data["user_relevance"],
+                    feedback_data["user_usefulness"],
+                    feedback_data["user_comments"],
+                    timestamp,
+                ),
+            )
+        conn.commit()
+    except Exception as e:
+        print(f"An error occurred while saving feedback: {e}")
     finally:
         conn.close()
