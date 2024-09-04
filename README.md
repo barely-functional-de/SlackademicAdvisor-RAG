@@ -73,7 +73,7 @@ The project uses **Mage-ai** for orchestrating the pipeline blocks
    - Reads the chunk data and Elasticsearch status before indexing the combined chunked documents into the LLM-Zoomcamp index set up in the `Setup_elasticsearch` block.
 
 6. **Init_postgres_database**:
-   - Initializes the PostgreSQL database with the table `conversations` and the required schema if it doesn’t exist. 
+   - Initializes the PostgreSQL database with the tables `conversations`, and `user_feedback` and the required schema if it doesn’t exist. 
    - Captures the search conversations used to query the LLM-Zoomcamp Elasticsearch database.
 
 7. **Elasticsearch_query_block**:
@@ -83,7 +83,7 @@ The project uses **Mage-ai** for orchestrating the pipeline blocks
 ### Streamlit Interface
 
 The project includes a **Streamlit** interface for the application:
-![Streamlit UI](./readme/user_interface/streamlit_ui.PNG)
+![Streamlit UI](./readme/user_interface/streamlit_ui_feedback.PNG)
 
 - **Sidebar (Settings)**: 
   - Contains course and model selection options for user queries.
