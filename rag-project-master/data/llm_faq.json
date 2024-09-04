@@ -160,5 +160,113 @@
         "answer": "Yes. See module 2 and the open-ai-alternatives.md in module 1 folder.",
         "course": "llm-zoomcamp",
         "section": "Module 1: Introduction"
+    },
+    {
+        "question": "SaturnCloud: How do you manage the changes from SaturnCloud to your Github repository?",
+        "answer": "Of course you should have first added your Github repository in SaturnCloud and the SSH Key in your Github account settings.\n\nOnce you are in jupyter notebook from SaturnCloud, open the terminal and write these lines:\n1- Navigate to Your Project Directory: \ncd /home/jovyan/my_project\n2- Configure GitHub Remote to Use SSH: \ngit remote set-url origin git@github.com:username/repository.git\n3- Stage, Commit and push your changes:\ngit add .\ngit commit -m \"Your commit message\"\ngit push",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "SaturnCloud: How can I clean out the hugging face model cache on a saturn cloud notebook?",
+        "answer": "Clean out your cache using the following code:\nfrom transformers import TRANSFORMERS_CACHE\nprint(TRANSFORMERS_CACHE)\nimport shutil\nshutil.rmtree(TRANSFORMERS_CACHE)\nNote: Make sure to shutdown the notebook and restart the kernel",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "ElasticSearch: Can I backup and restore my elasticsearch index from one to another docker container?",
+        "answer": "Yes, you can. Here the step to follow:\n\n- Open a bash session in the elasticsearch container\n```bash\ndocker exec -it elasticsearch bash\n```\n- Add path.repo configuration:\n```bash\necho path.repo: [\"/usr/share/elasticsearch/backup\"] >> /usr/share/elasticsearch/config/elasticsearch.yml\n```\n- Restart container and verify it was created correctly:\n```bash\ndocker restart elasticsearch\ncurl -X GET \"localhost:9200/_snapshot/my_backup?pretty\"\n```\n- Create the snapshot (this is the backup ;))\n```bash\ncurl -X PUT \"localhost:9200/_snapshot/my_backup/snapshot_1?wait_for_completion=true\" -H 'Content-Type: application/json' -d'\n{\n  \"indices\": \"your_index_name\",\n  \"ignore_unavailable\": true,\n  \"include_global_state\": false\n}\n'\n```\n- Copy the backup to my machine:\n```bash\ndocker cp elasticsearch:/usr/share/elasticsearch/backup /path/to/local\n```\n- Now create the new container or use docker-compose just in case you are following the module 2:\n```bash\ndocker compose up -d\n```\n- Add the path.repo configuration in the new one, same as before:\n```bash\ndocker exec -it new_elasticsearch bash\necho path.repo: [\"/usr/share/elasticsearch/backup\"] >> /usr/share/elasticsearch/config/elasticsearch.yml\n```\n- Restart the docker container and copy the snapshot in it:\n```bash\ndocker restart new_elasticsearch\ndocker cp /path/to/local/backup new_elasticsearch:/usr/share/elasticsearch\n```\n- Register the Snapshot Repository in the New Container:\n```bash\ncurl -X PUT \"localhost:9200/_snapshot/my_backup\" -H 'Content-Type: application/json' -d'\n{\n  \"type\": \"fs\",\n  \"settings\": {\n\t\"location\": \"/usr/share/elasticsearch/backup\"\n  }\n}\n'\n```\n- Verify if it exists:\n```bash\ncurl -X GET \"localhost:9200/_snapshot/my_backup/snapshot_1?pretty\"\n```\n- Restore the snapshot:\n```bash\ncurl -X POST \"localhost:9200/_snapshot/my_backup/snapshot_1/_restore\" -H 'Content-Type: application/json' -d'\n{\n  \"indices\": \"your_index_name\",\n  \"ignore_unavailable\": true,\n  \"include_global_state\": false\n}\n'\n```\n- Show your indexes:\n```bash\ncurl -X GET \"localhost:9200/_cat/indices?v\"\n```\n- Extra point: If you want to change the original index name by other when you restore the snapshot:\n```bash\ncurl -X POST \"localhost:9200/_snapshot/my_backup/snapshot_1/_restore?pretty\" -H 'Content-Type: application/json' -d'\n{\n  \"indices\": \"old_index\",\n  \"ignore_unavailable\": true,\n  \"include_global_state\": false,\n  \"rename_pattern\": \"old_index\",\n  \"rename_replacement\": \"new_index\"\n}\n'\n```",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "ElasticSearch: How can I limit the memory used by the ElasticSearch container?",
+        "answer": "You can limit the amount of memory used in the ElasticSearch container by adding the next line to the environment section of your docker-compose. Choose the amount of your preference, e.g.:\n- \"ES_JAVA_OPTS=-Xms1g -Xmx1g\"  # Set Java heap size to 1GB\n\n- You can limit CPU usage for an Elasticsearch service within a docker-compose.yaml file, you can utilize the resource configuration options available in Docker Compose. This includes cpus to limit the number of CPUs that the container can utilize. You can configure your Elasticsearch section in the docker-compose.yaml to restrict CPU usage:\n\nservices:\n  elasticsearch:\n    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3\n    container_name: elasticsearch\n    environment:\n      - discovery.type=single-node\n      - xpack.security.enabled=false\n    ports:\n      - \"9200:9200\"\n      - \"9300:9300\"\n    deploy:\n      resources:\n        limits:\n          cpus: '1.0'  # Limits to 1 CPU\n        reservations:\n          cpus: '0.5'  # Reserves 0.5 CPUs",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Docker: How to inspect the content of a file inside a Docker container?",
+        "answer": "You have several ways to inspect the content of a file when you are inside a Docker container. \nFirst, make sure you ran the docker container interactively using bash:\ndocker exec -it <container> bash\nThen, you are able to use bash commands. For this case, I propose two solutions:\nUse “cat” and the file you want to see the content: cat your_file . This will directly print the content in your terminal.\nInstall vim or nano using apt get and open the file using vim or nano (this can be more suitable for larger files):\napt-get install vim\nvim your_file\nThen, you can exit your file in vim by pressing ESC then typing “:q” and finally press ENTER",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Docker: Error: Docker mounted volume adds ;C to end of windows path",
+        "answer": "Use the following line instead in mounting the current volume to docker for Q4:\n`-v \"/${PWD}/ollama_files:/root/.ollama\"`",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Docker: Why does inferring using Phi 3 locally take so long on Macbook Air M1?",
+        "answer": "In Docker Desktop, try to increase the resource.\nGo to the Dashboard > Settings > Resources. Raise the memory limit to 15GB and swap to 4GB - be generous. Applied and restarted the changes",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Docker: How can to clean docker cache?",
+        "answer": "docker system prune -a",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Ollama: “Error: pull model manifest: 503: no healthy upstream” when pulling a model with Ollama",
+        "answer": "A network connection failure usually causes this error and if you try to repeat the operation immediately it’ll still fail. It’s a temporary error, you should wait for 2 or 3 minutes before attempting to pull the model again. Then some minutes later, the operation will success.",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Ollama: Error: NotFoundError: Error code: 404 - {'error': {'message': \"model XXX not found, try pulling it first\" …",
+        "answer": "To solve this you need to pull one of these models first: https://ollama.com/library . Also check the proper name of the module.",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Ollama: Running Ollama locally on Colab gives error after the llm() line",
+        "answer": "APIConnectionError: Connection error.\nIt seems to be running at localhost:11434 however localhost:11434/v1/ gives 404\nFound a solution in the Medium article and this link: \nhttps://medium.com/@mauryaanoop3/running-ollama-on-google-colab-free-tier-a-step-by-step-guide-9ef74b1f8f7a\nhttps://github.com/ollama/ollama/issues/703",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Ollama: How can remove Ollama model?",
+        "answer": "ollama list\nollama rm [model_name]",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Ollama: Error code 500 InternalServerError",
+        "answer": "InternalServerError: Error code: 500 - {'error': {'message': 'model requires more system memory (5.6 GiB) than is available (1.5 GiB)', 'type': 'api_error', 'param': None, 'code': None}}.\n\nRunning elastic search with the docker-compose is the cause of the RAM memory issue. To fix this you need to change the docker-compose.yaml file to limit the RAM usage of elastic search\n\nversion: '3.8'\n\nservices:\n  elasticsearch:\n    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3\n    container_name: elasticsearch\n    environment:\n      - discovery.type=single-node\n      - xpack.security.enabled=false\n      - ES_JAVA_OPTS=-Xms1g -Xmx1g  # change 1\n    ports:\n      - \"9200:9200\"\n      - \"9300:9300\"\n    deploy:\n      resources:\n        limits:\n          memory: 2G  # change 2\n\n  ollama:\n    image: ollama/ollama\n    container_name: ollama\n    volumes:\n      - ollama:/root/.ollama\n    ports:\n      - \"11434:11434\"\n\nvolumes:\n  ollama:",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Mistral AI: Unable to get Mistral-7B-v0.1 access despite accepting terms on HF",
+        "answer": "Manually set the token as below:\naccess_token = <your_token>\nmodel  = AutoModelForCausalLM.from_pretrained(\"mistralai/Mistral-7B-v0.1\", token=access_token)\ntokenizer = AutoTokenizer.from_pretrained(\"mistralai/Mistral-7B-v0.1\", token=access_token)",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Python: Error: ModuleNotFoundError: No module named 'transformers.cache_utils'",
+        "answer": "To solve just install transformers directly from github\n!pip install git+https://github.com/huggingface/transformers",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Python: Exception: data did not match any variant of untagged enum PyPreTokenizerTypeWrapper at line 40 column 3",
+        "answer": "To solve just install transformers directly from github\n!pip install git+https://github.com/huggingface/transformers",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "Python: from google.protobuf.pyext import _message / TypeError: bases must be types",
+        "answer": "pip install protobuf==3.20.1",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
+    },
+    {
+        "question": "HuggingFace: How to get the number of tokens in a certain string related to a certain model on hugging face?",
+        "answer": "1. search with the model name on hugging face.\n2. get the transformer used on the model.\n3. using the transformer, encode the string you want.\n4. calculate the length of the outputted tensor.\n\nThe previous code snippet uses the tokenizer of google/gemma-2b LLM.\nDon’t forget to make your token secret.",
+        "course": "llm-zoomcamp",
+        "section": "Module 2: Open-Source LLMs"
     }
 ]

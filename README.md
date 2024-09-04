@@ -104,16 +104,21 @@ The project includes a **Streamlit** interface for the application:
 ### Monitoring with Grafana
 
 For monitoring, the project uses **Grafana**:
-![Grafana UI](./readme/monitor/monitoring_grafana.PNG)
+![Grafana UI](./readme/monitor/monitoring_grafana_1.PNG)  
+![Grafana UI](./readme/monitor/monitoring_grafana_2.PNG)
 
 - **Grafana** is dependent on the PostgreSQL `conversations` table.
 - Creates a dashboard with panels for:
-  - Response Time
-  - Relevance Distribution
+  - Recent Conversations
   - Model Usage
   - Token Usage
   - OpenAI Cost
-  - Recent Conversations
+  - Response Time
+  - Feedback Rating Analysis
+  - Relevance Distribution
+  
+  
+  
 
 
 

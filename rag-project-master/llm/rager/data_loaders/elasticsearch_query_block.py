@@ -29,7 +29,7 @@ def load_data(*args, **kwargs):
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
     # Specify your data loading logic here
-    search_term = "How to create saturn cloud account?"
+    search_term = "Ollama: “Error: pull model manifest: 503: no healthy upstream” when pulling a model with Ollama"
     vector_search_term = model.encode(search_term)
 
     query = {
