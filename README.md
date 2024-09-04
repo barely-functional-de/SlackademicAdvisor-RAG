@@ -107,7 +107,7 @@ For monitoring, the project uses **Grafana**:
 ![Grafana UI](./readme/monitor/monitoring_grafana_1.PNG)  
 ![Grafana UI](./readme/monitor/monitoring_grafana_2.PNG)
 
-- **Grafana** is dependent on the PostgreSQL `conversations` table.
+- **Grafana** is dependent on the PostgreSQL tables `conversations`, and `user_feedback`.
 - Creates a dashboard with panels for:
   - Recent Conversations
   - Model Usage
@@ -115,11 +115,7 @@ For monitoring, the project uses **Grafana**:
   - OpenAI Cost
   - Response Time
   - Feedback Rating Analysis
-  - Relevance Distribution
-  
-  
-  
-
+  - Relevance Distribution 
 
 
 ## Reproducibility
