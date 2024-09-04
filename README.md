@@ -202,6 +202,8 @@ OPENAI_API_KEY=<your openai api key>
 
 - Open up **Grafana** on port `3000` and configure it to use the PostgreSQL database. The details are provided in the `.env` file.
 
+- Use the queries in the file [grafana.md](grafana.md) to recreate the Grafana dashboard for LLM-Zoomcamp.
+
 
 ## Conclusion
 
