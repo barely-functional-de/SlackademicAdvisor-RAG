@@ -120,7 +120,88 @@ For monitoring, the project uses **Grafana**:
 
 ## Reproducibility
 
-Clear instructions to be provided to ensure that the project can be easily reproduced and evaluated.
+### Requirements
+
+**System Requirements**:  
+Project is running on a GitHub Codespace machine with 2-core CPU, 8 GB RAM, and 32 GB storage.
+
+**Docker Installed**:  
+Ensure Docker is installed. If not, [follow this link to install Docker](https://docs.docker.com/get-docker/).
+
+### .env Setup
+
+Add a `.env` file in the folder `/rag-project-master` with the following details:
+
+```bash
+ENV=development
+
+# Project settings
+# If you start the project with ./start.sh, the project name and code path will already be set.
+PROJECT_NAME=$PROJECT_NAME
+MAGE_CODE_PATH=$MAGE_CODE_PATH
+
+# Load custom files
+PYTHONPATH="${MAGE_CODE_PATH}/${PROJECT_NAME}:${PYTHONPATH}"
+
+# Database
+POSTGRES_HOST=magic-database
+POSTGRES_DB=magic
+POSTGRES_PASSWORD=password
+POSTGRES_USER=postgres
+POSTGRES_PORT=5432
+MAGE_DATABASE_CONNECTION_URL="postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:5432/${POSTGRES_DB}"
+
+# Enhancements
+export DYNAMIC_BLOCKS_VERSION=2
+export KERNEL_MANAGER=magic
+export MEMORY_MANAGER_PANDAS_VERSION=2
+export MEMORY_MANAGER_POLARS_VERSION=2
+export MEMORY_MANAGER_VERSION=2
+export VARIABLE_DATA_OUTPUT_META_CACHE=1
+
+# Elasticsearch Configuration
+ELASTIC_URL_LOCAL=http://localhost:9200
+ELASTIC_URL=http://elasticsearch:9200
+ELASTIC_PORT=9200
+
+# Ollama Configuration
+OLLAMA_PORT=11434
+OLLAMA_URL='http://ollama:11434/v1/'
+
+# Streamlit Configuration
+STREAMLIT_PORT=8501
+
+# Other Configuration
+MODEL_NAME=multi-qa-MiniLM-L6-cos-v1
+INDEX_NAME=llm-course-qa
+
+# OpenAI API Key
+OPENAI_API_KEY=<your openai api key>
+```
+
+### Project Execution
+
+- From the `/rag-project-master` folder, execute `./scripts/start.sh` to build and start the following services:
+  - **Mage-ai**
+  - **Magic Postgres**
+  - **Elasticsearch**
+  - **Streamlit**
+  - **Grafana**
+  - **Ollama**
+
+- Make sure to do port forwarding for each of the services.
+
+- From **Mage-ai**, running on port `6789`, execute the `llm-orchestration` pipeline. 
+   
+  ![LLM-Orchestration Pipeline](./readme/orchestrator/llm_orchestration_pipeline.PNG) 
+  - The pipeline will set up the index `llm-zoomcamp` in Elasticsearch.
+  - Initialize the tables `conversations` and `user_feedback` in the PostgreSQL database.
+
+- Open up the **Streamlit** container running on port `8501` to ask questions.
+  - The question-answer details, along with user feedback, are captured in PostgreSQL tables.
+
+- Open up **Grafana** on port `3000` and configure it to use the PostgreSQL database. The details are provided in the `.env` file.
+
 
 ## Conclusion
 
